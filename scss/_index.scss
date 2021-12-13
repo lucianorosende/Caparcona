@@ -1,0 +1,125 @@
+/* ESTILOS INDEX Y DEMAS SECCIONES */
+
+body,html{
+
+    background-color: $charcoal;
+
+}
+
+.normal--Size{
+
+    height: 50%;
+    width: 50%;
+    border-radius: 40px;
+}
+
+.otherSize{
+    width: 20%;
+    height: 20%;
+    border-radius: 32px;
+}
+
+.news--media{
+
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    color: $redtree;
+    
+}
+
+.sales{
+
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+.justify{
+
+    text-align: justify;
+    width: 700px;
+}
+
+.fontEmpresa{
+
+    font-family: 'Open Sans', sans-serif;
+    color: $white;
+}
+
+
+.locales{
+
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+}
+
+.gMaps{
+
+    width: 800px;
+    height: 200px;
+    margin-left: 20px;
+}
+
+.margin{
+
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.marginSearch{
+    margin: 10px;
+}
+
+.borderImage{
+
+    border: solid 3px violet;
+}
+
+.hoverMain li:hover{
+    display:inline-block;
+    color: $yellowgreen;
+    background-color: $charcoal;
+    border-radius: 5px;
+
+ }
+
+ .borderHombre{
+
+    border: dotted 3px $charcoal;
+ }
+
+ .borderMujer{
+
+    border: outset 3px $blue;
+ }
+
+ .marginLocales{
+    margin-top: 14px;
+}
+
+.localesDisplay{
+    display: flex;
+    flex-direction: column;
+}
+
+.whiteLine{
+    color: $white;
+}
+
+.text--ColorAside{
+
+    color: $gray;
+}
+
+.rebaja__Style{
+
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Fruktur', cursive;
+    color: $lime;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    
+    
+}

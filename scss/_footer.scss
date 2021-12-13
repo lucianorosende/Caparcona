@@ -1,0 +1,46 @@
+@mixin size($width, $height, $br){
+    width: $width;
+    height: $height;
+    border-radius: $br;
+}
+
+/* ESTILOS FOOTER */
+
+.footer--Copy{
+
+    background-image: linear-gradient(to top right,black 95%,white);
+    position: sticky;
+    display: inline-block;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: $azure;
+    font-family: 'Dongle', sans-serif;
+    font-size: 20px;
+    height: 3%;
+    margin-bottom: 0px;
+    
+}
+
+.news--Left{
+
+    text-align: left;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: underline;
+    margin: 10px;
+    
+}
+
+.text--Color{
+
+    color: $lime;
+}
+
+.margin--Top{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.other--Size {
+    @include size(30%, 30%, 32px)
+}

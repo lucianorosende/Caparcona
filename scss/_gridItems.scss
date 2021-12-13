@@ -1,0 +1,45 @@
+/* GRID ITEMS */
+
+@mixin gridItem($gridArea){
+    grid-area: $gridArea;
+}
+
+.containerLocales{
+ 
+    margin: 15px;
+    display: grid;
+    
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 9% auto;
+        grid-template-areas: 
+          "localesNav gmaps-position"
+          "localesNav gmaps-position2"
+          "localesNav gmaps-position3"
+          "localesNav gmaps-position4"
+          
+          
+
+}
+
+.localesNav{
+    // grid-area: localesNav;
+    @include gridItem(localesNav);
+}
+
+.gmaps-position{
+    // grid-area: gmaps-position;
+    @include gridItem(gmaps-position);
+    
+}
+.gmaps-position2{
+    // grid-area: gmaps-position2;
+    @include gridItem(gmaps-position2);
+}
+.gmaps-position3{
+    // grid-area: gmaps-position3;
+    @include gridItem(gmaps-position3);
+}
+.gmaps-position4{
+    // grid-area: gmaps-position4;
+    @include gridItem(gmaps-position4);
+}

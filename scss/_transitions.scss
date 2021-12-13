@@ -1,0 +1,45 @@
+/* TRANSITIONS */
+
+.transitionSize{
+    transition: all 1s;
+}
+
+.transitionSize:hover{
+
+    width: 35%;
+    height: 35%;
+
+}
+
+
+.transitionWidth{
+    transition: all .75s;
+    transition-timing-function: 1s cubic-bezier(1,-0.02,.91,.39)
+}
+
+.transitionWidth:hover{
+    width: 75%;
+    
+}
+
+.imageAnimation{
+
+    animation-name: image;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+@keyframes image {
+    
+
+    from{
+
+        opacity: 0;
+
+
+    }
+
+    to{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,34 @@
+/* FLEX ITEMS */
+
+.flexCenter{
+
+    display: flex;
+    justify-content: center;
+}
+
+.asideFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $lightblue;
+    flex-wrap: nowrap;
+    
+}
+
+.sectionFlex{
+    display: flex;
+    flex-direction: row;
+}
+
+.navStyle{
+    
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-start;
+    width: 12%;
+    height: 160px;
+    margin: 10px;
+    border-radius: 10px;
+    
+}
