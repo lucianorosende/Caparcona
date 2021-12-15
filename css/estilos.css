@@ -178,8 +178,8 @@ body, html {
   transition: all 1s; }
 
 .transitionSize:hover {
-  width: 35%;
-  height: 35%; }
+  width: 65%;
+  height: 65%; }
 
 .transitionWidth {
   transition: all .75s;
@@ -227,9 +227,9 @@ body, html {
   margin-bottom: 20px; }
 
 .other--Size {
-  width: 30%;
-  height: 30%;
-  border-radius: 12px; }
+  width: 50%;
+  height: 50%;
+  border-radius: 8px; }
 
 /* DESKTOP */
 @media (min-width: 1200px) {
