@@ -117,7 +117,12 @@
         @include size(445px, 250px, 10px)
     }
     
-    
+    .fontEmpresa{
+
+        font-family: 'Open Sans', sans-serif;
+        color: $white;
+        width: 90%;
+    }
     
 }
 
@@ -213,7 +218,12 @@
         @include size(345px, 194px, 10px)
     }
 
-    
+    .fontEmpresa{
+
+        font-family: 'Open Sans', sans-serif;
+        color: $white;
+        width: 90%;
+    }
 
 
 

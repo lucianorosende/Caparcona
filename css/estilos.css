@@ -88,7 +88,7 @@ body, html {
   margin: 10px; }
 
 .borderImage {
-  border: solid 3px violet; }
+  border: solid 1px violet; }
 
 .hoverMain li:hover {
   display: inline-block;
@@ -229,7 +229,7 @@ body, html {
 .other--Size {
   width: 30%;
   height: 30%;
-  border-radius: 32px; }
+  border-radius: 12px; }
 
 /* DESKTOP */
 @media (min-width: 1200px) {
@@ -300,7 +300,11 @@ body, html {
   .sizeVideo {
     width: 445px;
     height: 250px;
-    border-radius: 10px; } }
+    border-radius: 10px; }
+  .fontEmpresa {
+    font-family: 'Open Sans', sans-serif;
+    color: #78FFD6;
+    width: 90%; } }
 
 /* SMARTPHONE */
 @media (max-width: 575px) {
@@ -364,4 +368,8 @@ body, html {
   .sizeVideo {
     width: 345px;
     height: 194px;
-    border-radius: 10px; } }
+    border-radius: 10px; }
+  .fontEmpresa {
+    font-family: 'Open Sans', sans-serif;
+    color: #78FFD6;
+    width: 90%; } }
