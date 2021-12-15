@@ -10,7 +10,7 @@
     display: grid;
     
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 9% auto;
+        grid-template-columns: 15% auto;
         grid-template-areas: 
           "localesNav gmaps-position"
           "localesNav gmaps-position2"

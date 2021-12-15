@@ -155,7 +155,7 @@ body, html {
   margin: 15px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 9% auto;
+  grid-template-columns: 15% auto;
   grid-template-areas: "localesNav gmaps-position" "localesNav gmaps-position2" "localesNav gmaps-position3" "localesNav gmaps-position4"; }
 
 .localesNav {
@@ -180,13 +180,6 @@ body, html {
 .transitionSize:hover {
   width: 65%;
   height: 65%; }
-
-.transitionWidth {
-  transition: all .75s;
-  transition-timing-function: 1s cubic-bezier(1, -0.02, 0.91, 0.39); }
-
-.transitionWidth:hover {
-  width: 75%; }
 
 .imageAnimation {
   animation-name: image;
@@ -227,6 +220,11 @@ body, html {
   margin-bottom: 20px; }
 
 .other--Size {
+  width: 30%;
+  height: 30%;
+  border-radius: 8px; }
+
+.other--Size--E {
   width: 50%;
   height: 50%;
   border-radius: 8px; }
@@ -304,7 +302,14 @@ body, html {
   .fontEmpresa {
     font-family: 'Open Sans', sans-serif;
     color: #78FFD6;
-    width: 90%; } }
+    width: 90%; }
+  .locales {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 0.9rem; }
+  .gMaps {
+    width: 95%;
+    height: 200px;
+    margin-left: 20px; } }
 
 /* SMARTPHONE */
 @media (max-width: 575px) {
@@ -372,4 +377,11 @@ body, html {
   .fontEmpresa {
     font-family: 'Open Sans', sans-serif;
     color: #78FFD6;
-    width: 90%; } }
+    width: 90%; }
+  .locales {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 0.9rem; }
+  .gMaps {
+    width: 95%;
+    height: 200px;
+    margin-left: 20px; } }
