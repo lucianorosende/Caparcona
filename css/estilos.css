@@ -166,6 +166,18 @@ body, html {
   grid-template-columns: 15% auto;
   grid-template-areas: "localesNav gmaps-position" "localesNav gmaps-position2" "localesNav gmaps-position3" "localesNav gmaps-position4"; }
 
+.containerFooter {
+  display: grid;
+  grid-template-columns: 95% auto;
+  grid-template-rows: auto;
+  grid-template-areas: "copyArea goUp"; }
+
+.copyArea {
+  grid-area: copyArea; }
+
+.goUp {
+  grid-area: goUp; }
+
 .localesNav {
   grid-area: localesNav; }
 
@@ -203,11 +215,8 @@ body, html {
 /* ESTILOS FOOTER */
 .footer--Copy {
   background-color: #272727;
-  position: relative;
-  display: flex;
   bottom: 0;
   width: 100%;
-  justify-content: center;
   color: azure;
   font-family: 'Dongle', sans-serif;
   font-size: 20px;
@@ -234,6 +243,9 @@ body, html {
 
 .margin-footer {
   margin-top: 20px; }
+
+.margin-up {
+  text-align: end; }
 
 .other--Size {
   width: 30%;
@@ -331,7 +343,15 @@ body, html {
   .gMaps {
     width: 95%;
     height: 200px;
-    margin-left: 20px; } }
+    margin-left: 20px; }
+  .containerFooter {
+    display: grid;
+    grid-template-columns: 91% auto;
+    grid-template-areas: "copyArea goUp"; }
+  .copyArea {
+    grid-area: copyArea; }
+  .goUp {
+    grid-area: goUp; } }
 
 /* SMARTPHONE */
 @media (max-width: 575px) {
@@ -404,4 +424,13 @@ body, html {
   .gMaps {
     width: 95%;
     height: 200px;
-    margin-left: 20px; } }
+    margin-left: 20px; }
+  .containerFooter {
+    display: grid;
+    grid-template-columns: 88% auto;
+    grid-template-rows: auto;
+    grid-template-areas: "copyArea goUp"; }
+  .copyArea {
+    grid-area: copyArea; }
+  .goUp {
+    grid-area: goUp; } }

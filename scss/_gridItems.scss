@@ -21,6 +21,33 @@
 
 }
 
+.containerFooter{
+
+    display: grid;
+
+    grid-template-columns: 95% auto;
+    grid-template-rows: auto;
+
+
+    grid-template-areas: 
+    "copyArea goUp"
+    
+
+
+
+}
+
+
+.copyArea{
+
+    @include gridItem(copyArea);
+}
+.goUp{
+
+    @include gridItem(goUp);
+}
+
+
 .localesNav{
     // grid-area: localesNav;
     @include gridItem(localesNav);

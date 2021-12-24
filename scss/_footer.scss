@@ -9,19 +9,22 @@
 .footer--Copy{
 
     background-color: rgb(39, 39, 39);
-    position: relative;
-    display: flex;
+    
     bottom: 0;
     width: 100%;
-    justify-content: center;
     color: $azure;
     font-family: 'Dongle', sans-serif;
     font-size: 20px;
     padding-top: 10px;
+    
    
     
     
 }
+
+
+
+
 
 .footerCopy{
     background-color: black;
@@ -54,6 +57,14 @@
 .margin-footer{
     margin-top: 20px;
 
+}
+
+.margin-up{
+
+    text-align: end;
+    
+   
+   
 }
 
 .other--Size {
