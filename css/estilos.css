@@ -6,7 +6,7 @@
 
 /* ESTILOS HEADER y NAVBAR */
 header {
-  background-image: linear-gradient(#E6F8B2, #073B3A 120%);
+  background-image: linear-gradient(#E6F8B2, #073B3A 170%);
   position: sticky;
   top: 0;
   display: flex;
@@ -59,6 +59,10 @@ body, html {
   text-align: center;
   font-family: 'Bebas Neue', cursive;
   color: #A85751; }
+
+.Bebas {
+  text-align: center;
+  font-family: 'Bebas Neue', cursive; }
 
 .sales {
   font-family: 'Fjalla One', sans-serif; }
@@ -118,11 +122,15 @@ body, html {
 .rebaja__Style {
   font-weight: bold;
   font-size: 30px;
-  font-family: 'Fruktur', cursive;
+  font-family: 'Bebas Neue', cursive;
   color: #BFB48F;
   display: flex;
   justify-content: center;
   text-align: center; }
+
+.logoSize {
+  width: 2rem;
+  height: 2rem; }
 
 /* FLEX ITEMS */
 .flexCenter {
@@ -133,7 +141,7 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #C9C9EE;
+  background-color: #BFB48F;
   flex-wrap: nowrap; }
 
 .sectionFlex {
@@ -146,7 +154,7 @@ body, html {
   display: flex;
   justify-content: flex-start;
   width: 12%;
-  height: 160px;
+  height: 180px;
   margin: 10px;
   border-radius: 10px; }
 
@@ -194,23 +202,28 @@ body, html {
 
 /* ESTILOS FOOTER */
 .footer--Copy {
-  background-image: linear-gradient(to top right, black 95%, white);
-  position: sticky;
-  display: inline-block;
+  background-color: #272727;
+  position: relative;
+  display: flex;
   bottom: 0;
   width: 100%;
-  text-align: center;
+  justify-content: center;
   color: azure;
   font-family: 'Dongle', sans-serif;
   font-size: 20px;
-  height: 3%;
-  margin-bottom: 0px; }
+  padding-top: 10px; }
+
+.footerCopy {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; }
 
 .news--Left {
-  text-align: left;
-  font-family: 'Bebas Neue', cursive;
-  text-decoration: underline;
-  margin: 10px; }
+  display: flex;
+  justify-content: center;
+  font-family: 'Bebas Neue', cursive; }
 
 .text--Color {
   color: #BFB48F; }
@@ -218,6 +231,9 @@ body, html {
 .margin--Top {
   margin-top: 20px;
   margin-bottom: 20px; }
+
+.margin-footer {
+  margin-top: 20px; }
 
 .other--Size {
   width: 30%;
@@ -228,6 +244,12 @@ body, html {
   width: 50%;
   height: 50%;
   border-radius: 8px; }
+
+.media-margin {
+  margin-right: 35px; }
+
+.media-color {
+  color: azure; }
 
 /* DESKTOP */
 @media (min-width: 1200px) {
@@ -258,7 +280,7 @@ body, html {
   .rebaja__Style {
     font-weight: bold;
     font-size: 22px;
-    font-family: 'Fruktur', cursive;
+    font-family: 'Bebas Neue', cursive;
     color: #BFB48F;
     display: flex;
     justify-content: center;
@@ -314,17 +336,16 @@ body, html {
 /* SMARTPHONE */
 @media (max-width: 575px) {
   .footer--Copy {
-    background-image: linear-gradient(to top right, black 95%, white);
-    position: sticky;
-    display: inline-block;
+    background-color: #272727;
+    position: relative;
+    display: flex;
     bottom: 0;
     width: 100%;
-    text-align: center;
+    justify-content: center;
     color: azure;
     font-family: 'Dongle', sans-serif;
-    font-size: 16px;
-    height: 3%;
-    margin-bottom: 0px; }
+    font-size: 20px;
+    padding-top: 10px; }
   nav {
     font-family: 'Bebas Neue', cursive;
     font-size: 16px;
@@ -332,11 +353,11 @@ body, html {
     display: flex; }
   .rebaja__Style {
     font-weight: bold;
-    font-family: 'Fruktur', cursive;
+    font-family: 'Bebas Neue', cursive;
     color: #BFB48F;
     display: flex;
     justify-content: center;
-    font-size: 13px;
+    font-size: 20px;
     text-align: center;
     width: 100%; }
   .normal--Size {
@@ -354,12 +375,11 @@ body, html {
   .news--media {
     text-align: center;
     font-family: 'Bebas Neue', cursive;
-    font-size: 12px; }
+    font-size: 20px; }
   .news--Left {
     text-align: left;
     font-family: 'Bebas Neue', cursive;
-    text-decoration: underline;
-    color: #BFB48F;
+    color: azure;
     margin-left: 10px; }
   .navStyle {
     font-family: 'Bebas Neue', cursive;

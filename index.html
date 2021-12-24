@@ -14,63 +14,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Fruktur&display=swap" rel="stylesheet">  
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body> 
     <header>
-        
-          <nav class="navbar navbar-expand">
-            <div class=" container-fluid">
-                
-                <li class="nav-item">
-                    <a class="nav-link this--Section section--Menu p-1 rounded" href="index.html">
-                        INICIO
-                      </a>
-                </li>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+      <nav class="navbar navbar-expand">
+        <div>
+          <a href="index.html">
+            <img src="img/logo.png" alt="" class="logoSize">
+
+          </a>
+
+        </div>
+        <div class=" container-fluid">
+            
+            <li class="nav-item">
+                <a class="nav-link this--Section section--Menu p-1 rounded" href="index.html">
+                    INICIO
+                  </a>
+            </li>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
               
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  
-                <ul class="navbar-nav me-auto">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle nav-link section--Menu p-1 rounded" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          HOMBRE
-                        </a>
+            <ul class="navbar-nav me-auto">
+                <li class="dropdown">
+                    <a class="dropdown-toggle nav-link section--Menu p-1 rounded" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      HOMBRE
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item rounded" href="Secciones/ropas_hombre.html">Camisas</a></li>
+                      <li><a class="dropdown-item rounded" href="Secciones/ropas_hombre.html">Remeras</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item rounded" href="Secciones/ropas_hombre.html">Musculosas</a></li>
+                    </ul>
+                </li>
+            </div> 
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+                  <ul class="navbar-nav me-auto">
+                      <li class="dropdown nav-item">
+                          <a class="dropdown-toggle nav-link section--Menu p-1 rounded" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          MUJER
+                          </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item rounded" href="Secciones/ropas_hombre.html">Camisas</a></li>
-                          <li><a class="dropdown-item rounded" href="Secciones/ropas_hombre.html">Remeras</a></li>
+                          <li><a class="dropdown-item rounded" href="Secciones/ropas_mujer.html">Abrigos</a></li>
+                          <li><a class="dropdown-item rounded" href="Secciones/ropas_mujer.html">Blusas</a></li>
                           <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item rounded" href="Secciones/ropas_hombre.html">Musculosas</a></li>
+                          <li><a class="dropdown-item rounded" href="Secciones/ropas_mujer.html">Bikinis</a></li>
                         </ul>
-                    </li>
-                </div> 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  
-                      <ul class="navbar-nav me-auto">
-                          <li class="dropdown nav-item">
-                              <a class="dropdown-toggle nav-link section--Menu p-1 rounded" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              MUJER
-                              </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item rounded" href="Secciones/ropas_mujer.html">Abrigos</a></li>
-                              <li><a class="dropdown-item rounded" href="Secciones/ropas_mujer.html">Blusas</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item rounded" href="Secciones/ropas_mujer.html">Bikinis</a></li>
-                            </ul>
-                          </li>
-                    </div>   
-                  
-                  <li class="nav-item">
-                    <a class="nav-link section--Menu p-1 rounded" href="Secciones/empresa.html">EMPRESA</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link section--Menu p-1 rounded" href="Secciones/locales.html">LOCALES</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+                      </li>
+                </div>   
+              
+              <li class="nav-item">
+                <a class="nav-link section--Menu p-1 rounded" href="Secciones/empresa.html">EMPRESA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link section--Menu p-1 rounded" href="Secciones/locales.html">LOCALES</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
     </header>
 
@@ -82,7 +89,9 @@
     <main> <!-- contenido principal de la pagina-->
 
 
-
+      <section class="margin--Top"> <!-- titulo promocionando los relojes-->
+        <h2 class="rebaja__Style">APROVECHA ESTOS RELOJES EN REBAJA DE PRECIO POR TIEMPO LIMITADO!</h2>
+      </section>
 
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="display:flex">
             <div class="carousel-indicators">
@@ -94,28 +103,28 @@
             <div class="carousel-inner">
               <div class="carousel-item active container-fluid">
                 <img src="https://cdn.shopify.com/s/files/1/0090/7044/4603/products/ignition-swiss-made-silver-blue-watch-564529_590x.png?v=1626273230" class="d-block d-flex justify-content-center normal--Size2 mx-auto mb-5 pb-4 img-fluid"  alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block Bebas">
                   <h5>Reloj Suizo Azul</h5>
                   <p>10499$</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="https://cdn.shopify.com/s/files/1/0090/7044/4603/products/strat-3-green-titanium-swiss-sport-chrono-watch-159793_590x.png?v=1619540132" class="d-block d-flex justify-content-center  normal--Size mx-auto mb-5 pb-5 img-fluid" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block Bebas">
                   <h5>Reloj Sport Chrono Verde</h5>
                   <p>11499$</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="https://cdn.shopify.com/s/files/1/0090/7044/4603/products/strat-3-red-titanium-swiss-sport-chrono-watch-584496_900x.png?v=1619540123" class="d-block d-flex justify-content-center normal--Size mx-auto mb-5 pb-5 img-fluid" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block Bebas">
                   <h5>Reloj Rojo Titanio</h5>
                   <p>11499$</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="https://cdn.shopify.com/s/files/1/0090/7044/4603/products/shift-red-swiss-sport-chrono-watch-298605_590x.png?v=1619540120" class="d-block d-flex justify-content-center normal--Size mx-auto mb-5 pb-5 img-fluid" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block Bebas">
                   <h5>Reloj Chrono rojo suizo Edicion Limitada</h5>
                   <p>13499$</p>
                 </div>
@@ -131,16 +140,9 @@
             </button>
           </div>
 
-
-
-
-
-
-
-        <section class="margin--Top"> <!-- titulo promocionando los relojes-->
-            <h2 class="rebaja__Style">APROVECHA ESTOS RELOJES EN REBAJA DE PRECIO POR TIEMPO LIMITADO!</h2>
-        </section>
-
+          <section class="margin--Top">
+            <h3 class="rebaja__Style">ROPA DE ULTIMA CALIDAD EN UN 50% DE DESCUENTO CON ESTAS NUEVAS MARCAS!</h3>
+          </section>
 
           <div class="d-flex row justify-content-center mx-auto">
             <div class="card mx-1 my-1" style="width: 18rem;" style="border-radius: 20px;">
@@ -167,15 +169,8 @@
                   <a href="Secciones/ropas_hombre.html" class="btn btn-primary">Ir a la Sección</a>
                 </div>
               </div>
-          </div>  
-          
-
-
-
-
-        <section class="margin--Top">
-          <h3 class="rebaja__Style">ROPA DE ULTIMA CALIDAD EN UN 50% DE DESCUENTO CON ESTAS NUEVAS MARCAS!</h3>
-        </section>  
+          </div>  <br>
+            
         <section> <!--Suscripcion futura para saber lo proximo que llegue a salir-->
 
             <h4 class="news--media">NEWSLETTER</h4>
@@ -213,12 +208,33 @@
 
     <footer> <!-- footer linkeando redes y copyright-->
 
+      <div class="footerCopy margin-footer">
 
-        <h5 class="news--Left text--Color margin--Top">SEGUINOS EN NUESTRAS REDES</h5>
-        <img src="img/redes.png" alt="" class="other--Size">  
-        <img src="https://stonycreekswimcenter.com/_wp/wp-content/uploads/2016/07/join-our-team.jpg" alt="" class="other--Size"> 
-        <p class="footer--Copy">Copyright 2017 &copy; Caparcona Todos los derechos reservados. Design by: Luciano Rosende</p>
+        <h5 class="news--Left media-color margin--Top">SEGUINOS EN NUESTRAS REDES</h5>
+
         
+        <div class="media-margin">
+          <ul>
+            <li><a href="https://www.facebook.com/" class="media-color"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/home" class="media-color"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://myaccount.google.com/profile" class="media-color"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://www.youtube.com/" class="media-color"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/" class="media-color"><i class="fa fa-linkedin-square"></i></a></li>
+          </ul>
+        </div>
+        
+
+        <div class="footer--Copy">
+
+          <h5 class="">Copyright 2021 &copy; Design by: Luciano Rosende</h5>
+
+        </div>
+
+      </div>
+
+
+
+
 
 
 

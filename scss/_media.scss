@@ -50,7 +50,7 @@
 
         font-weight: bold;
         font-size: 22px;
-        font-family: 'Fruktur', cursive;
+        font-family: 'Bebas Neue', cursive;
         color: $lime;
         display: flex;
         justify-content: center;
@@ -145,17 +145,16 @@
 
     .footer--Copy{
 
-        background-image: linear-gradient(to top right,black 95%,white);
-        position: sticky;
-        display: inline-block;
+        background-color: rgb(39, 39, 39);
+        position: relative;
+        display: flex;
         bottom: 0;
         width: 100%;
-        text-align: center;
+        justify-content: center;
         color: $azure;
         font-family: 'Dongle', sans-serif;
-        font-size: 16px;
-        height: 3%;
-        margin-bottom: 0px;
+        font-size: 20px;
+        padding-top: 10px;
         
     }
 
@@ -171,11 +170,11 @@
     .rebaja__Style{
     
         font-weight: bold;
-        font-family: 'Fruktur', cursive;
+        font-family: 'Bebas Neue', cursive;
         color: $lime;
         display: flex;
         justify-content: center;
-        font-size: 13px;
+        font-size: 20px;
         text-align: center;
         width: 100%;
         
@@ -201,15 +200,15 @@
     
         text-align: center;
         font-family: 'Bebas Neue', cursive;
-        font-size: 12px;
+        font-size: 20px;
     }
     
     .news--Left{
     
         text-align: left;
         font-family: 'Bebas Neue', cursive;
-        text-decoration: underline;
-        color: $lime;
+        
+        color: $azure;
         margin-left: 10px;
         
     }

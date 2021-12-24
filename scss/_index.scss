@@ -27,6 +27,14 @@ body,html{
     
 }
 
+.Bebas{
+
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    
+    
+}
+
 .sales{
 
     font-family: 'Fjalla One', sans-serif;
@@ -79,6 +87,7 @@ body,html{
     color: $yellowgreen;
     background-color: $charcoal;
     border-radius: 5px;
+    
 
  }
 
@@ -114,7 +123,7 @@ body,html{
 
     font-weight: bold;
     font-size: 30px;
-    font-family: 'Fruktur', cursive;
+    font-family: 'Bebas Neue', cursive;
     color: $lime;
     display: flex;
     justify-content: center;
@@ -122,4 +131,12 @@ body,html{
 
     
     
+}
+
+.logoSize{
+
+    width: 2rem;
+    height: 2rem;
+
+
 }
