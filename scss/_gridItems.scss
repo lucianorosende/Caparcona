@@ -24,8 +24,8 @@
 .containerFooter{
 
     display: grid;
-
-    grid-template-columns: 95% auto;
+    justify-content: space-between;
+    
     grid-template-rows: auto;
 
 

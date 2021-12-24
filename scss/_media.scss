@@ -141,7 +141,7 @@
 
         display: grid;
     
-        grid-template-columns: 91% auto;
+        justify-content: space-between;
         
     
         grid-template-areas: 
@@ -278,7 +278,7 @@
 
         display: grid;
     
-        grid-template-columns: 88% auto;
+        justify-content: space-between;
         grid-template-rows: auto ;
     
         grid-template-areas: 

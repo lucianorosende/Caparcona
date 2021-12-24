@@ -168,7 +168,7 @@ body, html {
 
 .containerFooter {
   display: grid;
-  grid-template-columns: 95% auto;
+  justify-content: space-between;
   grid-template-rows: auto;
   grid-template-areas: "copyArea goUp"; }
 
@@ -346,7 +346,7 @@ body, html {
     margin-left: 20px; }
   .containerFooter {
     display: grid;
-    grid-template-columns: 91% auto;
+    justify-content: space-between;
     grid-template-areas: "copyArea goUp"; }
   .copyArea {
     grid-area: copyArea; }
@@ -427,7 +427,7 @@ body, html {
     margin-left: 20px; }
   .containerFooter {
     display: grid;
-    grid-template-columns: 88% auto;
+    justify-content: space-between;
     grid-template-rows: auto;
     grid-template-areas: "copyArea goUp"; }
   .copyArea {
