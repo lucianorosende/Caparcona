@@ -169,7 +169,6 @@ body, html {
 .containerFooter {
   display: grid;
   justify-content: space-between;
-  grid-template-rows: auto;
   grid-template-areas: "copyArea goUp"; }
 
 .copyArea {
@@ -219,8 +218,11 @@ body, html {
   width: 100%;
   color: azure;
   font-family: 'Dongle', sans-serif;
+  font-size: 20px; }
+
+.footerFont {
   font-size: 20px;
-  padding-top: 10px; }
+  color: black; }
 
 .footerCopy {
   background-color: black;
@@ -243,9 +245,6 @@ body, html {
 
 .margin-footer {
   margin-top: 20px; }
-
-.margin-up {
-  text-align: end; }
 
 .other--Size {
   width: 30%;
