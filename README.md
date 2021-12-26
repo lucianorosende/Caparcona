@@ -1,5 +1,5 @@
 # Caparcona
-El proyecto consta de una pagina comercial de venta de ropa y artilugios, con sus respectivos locales, contacto y historia del mismo.
+El proyecto consta de una pagina comercial de venta de ropa y artilugios, con sus respectivos locales, contacto e historia del mismo.
 
 Mi nombre es Luciano Martin Rosende, actualmente estudiando desarrollo web y toda la carrera de Programacion Fullstack dentro de Coderhouse.
 
