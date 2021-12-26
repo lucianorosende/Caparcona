@@ -23,9 +23,28 @@ nav{
 
     font-family: 'Bebas Neue', cursive;
     font-size: 22px;
-    text-align: center;
-    display: flex;
     
+    
+}
+
+.logoSize{
+
+    width: 2rem;
+    height: 2rem;
+
+
+}
+
+.navLetters{
+    color: $blue;
+}
+
+.logoSize2{
+
+    width: 2rem;
+    height: 2rem;
+
+
 }
 
 .this--Section{
@@ -40,6 +59,8 @@ nav{
     border-radius: 5px;
     padding: 3px;
 }
+
+
 
 li{
 

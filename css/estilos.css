@@ -20,9 +20,18 @@ ul {
 
 nav {
   font-family: 'Bebas Neue', cursive;
-  font-size: 22px;
-  text-align: center;
-  display: flex; }
+  font-size: 22px; }
+
+.logoSize {
+  width: 2rem;
+  height: 2rem; }
+
+.navLetters {
+  color: blue; }
+
+.logoSize2 {
+  width: 2rem;
+  height: 2rem; }
 
 .this--Section {
   color: #A85751; }
@@ -127,10 +136,6 @@ body, html {
   display: flex;
   justify-content: center;
   text-align: center; }
-
-.logoSize {
-  width: 2rem;
-  height: 2rem; }
 
 /* FLEX ITEMS */
 .flexCenter {
