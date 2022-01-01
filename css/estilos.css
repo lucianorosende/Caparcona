@@ -6,9 +6,7 @@
 
 /* ESTILOS HEADER y NAVBAR */
 header {
-  background-image: linear-gradient(#E6F8B2, #073B3A 170%);
-  position: sticky;
-  top: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,8 +17,20 @@ ul {
   list-style-image: none; }
 
 nav {
+  width: 100%;
+  background-image: linear-gradient(#E6F8B2, #073B3A 170%);
   font-family: 'Bebas Neue', cursive;
-  font-size: 22px; }
+  font-size: 22px;
+  color: black; }
+
+.blackLetter {
+  color: black; }
+
+.offcanvasColor {
+  background-image: linear-gradient(#E6F8B2, #073B3A 120%); }
+
+.fixButton {
+  width: 40%; }
 
 .logoSize {
   width: 2rem;
@@ -39,7 +49,8 @@ nav {
 .section--Menu:hover {
   color: yellowgreen;
   background-color: #073B3A;
-  border-radius: 5px; }
+  border-radius: 5px;
+  width: 25%; }
 
 li {
   display: inline-block;
@@ -288,10 +299,7 @@ body, html {
 /* TABLET */
 @media (min-width: 576px) and (max-width: 1199px) {
   nav {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 19px;
-    text-align: center;
-    display: flex; }
+    font-family: 'Bebas Neue', cursive; }
   .rebaja__Style {
     font-weight: bold;
     font-size: 22px;
@@ -370,10 +378,7 @@ body, html {
     font-size: 20px;
     padding-top: 10px; }
   nav {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 12px;
-    text-align: center;
-    display: flex; }
+    font-family: 'Bebas Neue', cursive; }
   .rebaja__Style {
     font-weight: bold;
     font-family: 'Bebas Neue', cursive;
@@ -436,10 +441,4 @@ body, html {
   .copyArea {
     grid-area: copyArea; }
   .goUp {
-    grid-area: goUp; }
-  .logoSize {
-    width: 1rem;
-    height: 1rem; }
-  .logoSize2 {
-    width: 1rem;
-    height: 1rem; } }
+    grid-area: goUp; } }

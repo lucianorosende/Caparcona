@@ -41,9 +41,6 @@
     nav{
     
         font-family: 'Bebas Neue', cursive;
-        font-size: 19px;
-        text-align: center;
-        display: flex;
         
     }
     .rebaja__Style{
@@ -185,9 +182,7 @@
     nav{
     
         font-family: 'Bebas Neue', cursive;
-        font-size: 12px;
-        text-align: center;
-        display: flex;
+        
         
     }
     
@@ -299,16 +294,6 @@
         @include gridItem(goUp);
     }
 
-    .logoSize{
 
-        width: 1rem;
-        height: 1rem;
-    }
-    
-    .logoSize2{
-
-        width: 1rem;
-        height: 1rem;
-    }
 
     }

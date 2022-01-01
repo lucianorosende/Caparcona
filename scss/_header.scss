@@ -2,9 +2,7 @@
 
 header{
     
-    background-image:linear-gradient($lightyellow , $charcoal 170%);
-    position: sticky;
-    top: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,11 +18,27 @@ ul{
 }
 
 nav{
-
+    width: 100%;
+    background-image:linear-gradient($lightyellow , $charcoal 170%);
     font-family: 'Bebas Neue', cursive;
     font-size: 22px;
+    color: black;
     
     
+    
+}
+
+.blackLetter{
+    color: black;
+}
+
+.offcanvasColor{
+
+    background-image:linear-gradient($lightyellow , $charcoal 120%);
+}
+
+.fixButton{
+    width: 40%;
 }
 
 .logoSize{
@@ -57,6 +71,7 @@ nav{
     color: $yellowgreen;
     background-color: $charcoal;
     border-radius: 5px;
+    width: 25%;
     
 }
 
@@ -75,3 +90,4 @@ li{
 a{
     text-decoration: none;
 }
+

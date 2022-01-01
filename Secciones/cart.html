@@ -18,83 +18,70 @@
 </head>
 <body> 
     <header class="d-flex">
-      <nav class="navbar navbar-expand">
-        <div>
-          <a href="../index.html">
-            <img src="../img/logo.png" alt="" class="logoSize">
-
-          </a>
-
-        </div>
-        <div class="container-fluid p-0">
-            
-            <li class="nav-item">
-                <a class="nav-link section--Menu p-1 rounded" href="../index.html">
-                    INICIO
-                  </a>
-            </li>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-light bg-dark sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex justify-content-start" href="../index.html"><img src="../img/logo.png" alt="" class="logoSize"></a>Caparcona
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
-          
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              
-            <ul class="navbar-nav me-auto">
-                <li class="dropdown">
-                    <a class="dropdown-toggle nav-link section--Menu p-1 rounded" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      HOMBRE
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item rounded" href="../Secciones/ropas_hombre.html">Camisas</a></li>
-                      <li><a class="dropdown-item rounded" href="../Secciones/ropas_hombre.html">Remeras</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item rounded" href="../Secciones/ropas_hombre.html">Musculosas</a></li>
-                    </ul>
+          <div class="offcanvas offcanvas-end offcanvasColor" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">CAPARCONA</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
                 </li>
-            </div> 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              
-                  <ul class="navbar-nav me-auto">
-                      <li class="dropdown nav-item">
-                          <a class="dropdown-toggle nav-link section--Menu p-1 rounded" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          MUJER
-                          </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item rounded" href="../Secciones/ropas_mujer.html">Abrigos</a></li>
-                          <li><a class="dropdown-item rounded" href="../Secciones/ropas_mujer.html">Blusas</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item rounded" href="../Secciones/ropas_mujer.html">Bikinis</a></li>
-                        </ul>
-                      </li>
-                </div>   
-              
-              <li class="nav-item">
-                <a class="nav-link section--Menu p-1 rounded" href="../Secciones/empresa.html">EMPRESA</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link section--Menu p-1 rounded" href="../Secciones/locales.html">LOCALES</a>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="">
-            <a href="../Secciones/login.html">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="#073B3A" class="bi bi-person-fill logoSize2" viewBox="0 0 16 16">
-                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-              </svg>
-    
-            </a>
-    
-          </div>
-          <div class="">
-            <a href="../Secciones/cart.html">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="#A85751" class="bi bi-cart-fill logoSize2" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </nav>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="" id="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    HOMBRE
+                  </a>
+                  <ul class="dropdown-menu fixButton" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="../Secciones/ropas_hombre.html">Camisas</a></li>
+                    <li><a class="dropdown-item" href="../Secciones/ropas_hombre.html">Remeras</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="../Secciones/ropas_hombre.html">Musculosas</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="" id="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    MUJER
+                  </a>
+                  <ul class="dropdown-menu fixButton" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="../Secciones/ropas_mujer.html">Abrigos</a></li>
+                    <li><a class="dropdown-item" href="../Secciones/ropas_mujer.html">Blusas</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="../Secciones/ropas_mujer.html">Bikinis</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../Secciones/empresa.html">EMPRESA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../Secciones/locales.html">LOCALES</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../Secciones/login.html" class="nav-link active">LOGIN
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#073B3A" class="bi bi-person-fill logoSize2" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg>
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../Secciones/cart.html" class="nav-link this--Section">SHOP
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#073B3A" class="bi bi-cart-fill logoSize2" viewBox="0 0 16 16">
+                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </a>
+                </li>
+              </ul>
+        </nav> 
       
     </header>
 
