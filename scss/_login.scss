@@ -1,0 +1,110 @@
+.loginBox{
+
+    
+    width: 300px;
+    height: 450px;
+    background-image:linear-gradient($lightyellow , $charcoal 150%);
+    margin: 6% auto;
+    position: relative;
+    border-radius: 10px;
+    
+}
+
+.loginImg{
+    width: 25%;
+    margin-left: 36%;
+    margin-top: 5%;
+}
+
+.loginMid{
+    display: flex;
+    justify-content: center;
+}
+
+
+.buttonsLogin{
+    width: 210px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.buttonToggle{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+
+}
+
+.inputGroup{
+
+    top: 170px;
+    position: absolute;
+    width: 270px;
+    transition: .5s;
+}
+
+.inputGroup-sub{
+
+    top: 110px;
+    position: absolute;
+    width: 270px;
+    transition: .5s;
+}
+
+.inputField{
+
+    width: 100%;
+    padding: 10px 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent
+
+}
+
+.submit-btn{
+
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin-left: 13%;
+    margin-top: 10%;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box{
+
+    margin-left: 5%;
+    margin-top: 11%;
+
+
+}
+
+span{
+    color: black;
+    margin-left: 2%;
+    
+}
+
+.filler{
+    
+    height: 29px;
+}
+
+.fontSub{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5%;
+}
