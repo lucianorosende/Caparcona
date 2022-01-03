@@ -219,12 +219,12 @@
     .normal--Size{
         
 
-        @include size(150%, 150%, 0px);
+        @include size(90%, 100%, 0px);
     }
     
     .normal--Size2{
       
-        @include size(350%, 350%, 0px);
+        @include size(100%, 200%, 0px);
     }
     
     .otherSize{
