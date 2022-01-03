@@ -125,7 +125,7 @@
     .locales{
 
         font-family: 'Bebas Neue', cursive;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .gMaps{
@@ -133,6 +133,23 @@
         width: 95%;
         height: 200px;
         margin-left: 20px;
+    }
+
+    .containerLocales{
+ 
+        margin: 15px;
+        display: grid;
+        
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 22% auto;
+            grid-template-areas: 
+              "localesNav gmaps-position"
+              "localesNav gmaps-position2"
+              "localesNav gmaps-position3"
+              "localesNav gmaps-position4"
+              
+              
+    
     }
     .containerFooter{
 
@@ -267,6 +284,23 @@
         width: 95%;
         height: 200px;
         margin-left: 20px;
+    }
+
+    .containerLocales{
+ 
+        margin: 15px;
+        display: grid;
+        
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 22% auto;
+            grid-template-areas: 
+              "localesNav gmaps-position"
+              "localesNav gmaps-position2"
+              "localesNav gmaps-position3"
+              "localesNav gmaps-position4"
+              
+              
+    
     }
 
     .containerFooter{

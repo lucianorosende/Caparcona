@@ -86,7 +86,7 @@ body, html {
   font-family: 'Fjalla One', sans-serif; }
 
 .justify {
-  text-align: justify;
+  text-align: left;
   width: 700px; }
 
 .fontEmpresa {
@@ -103,8 +103,8 @@ body, html {
   margin-left: 20px; }
 
 .margin {
-  margin-left: 30px;
-  margin-top: 30px; }
+  margin-top: 15px;
+  margin-left: 15px; }
 
 .marginSearch {
   margin: 10px; }
@@ -349,11 +349,17 @@ body, html {
     width: 90%; }
   .locales {
     font-family: 'Bebas Neue', cursive;
-    font-size: 0.9rem; }
+    font-size: 1.1rem; }
   .gMaps {
     width: 95%;
     height: 200px;
     margin-left: 20px; }
+  .containerLocales {
+    margin: 15px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 22% auto;
+    grid-template-areas: "localesNav gmaps-position" "localesNav gmaps-position2" "localesNav gmaps-position3" "localesNav gmaps-position4"; }
   .containerFooter {
     display: grid;
     justify-content: space-between;
@@ -432,6 +438,12 @@ body, html {
     width: 95%;
     height: 200px;
     margin-left: 20px; }
+  .containerLocales {
+    margin: 15px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 22% auto;
+    grid-template-areas: "localesNav gmaps-position" "localesNav gmaps-position2" "localesNav gmaps-position3" "localesNav gmaps-position4"; }
   .containerFooter {
     display: grid;
     justify-content: space-between;
