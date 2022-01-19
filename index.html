@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="js/info.js"></script>
 </head>
 <body> 
     <header>
@@ -33,13 +34,11 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav d-flex justify-content-start">
                 <li class="nav-item">
-                  <a class=" nav-link this--Section" aria-current="page" href="index.html">INICIO</a>
+                  <a class=" nav-link this--Section" aria-current="page" href="index.html" id="n1">INICIO</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link active dropdown-toggle" href="" id="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    HOMBRE
-                
-                  </a>
+                  <a class="nav-link active dropdown-toggle" href="" id="n2" role="button" data-bs-toggle="dropdown" aria-expanded="false">HOMBRE</a>
+                    
                   <ul class="dropdown-menu fixButton" aria-labelledby="offcanvasNavbarDropdown">
                     <li><a class="dropdown-item" href="Secciones/ropas_hombre.html">Camisas</a></li>
                     <li><a class="dropdown-item" href="Secciones/ropas_hombre.html">Remeras</a></li>
@@ -50,9 +49,8 @@
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link active dropdown-toggle" href="" id="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    MUJER
-                  </a>
+                  <a class="nav-link active dropdown-toggle" href="" id="n3" role="button" data-bs-toggle="dropdown" aria-expanded="false">MUJER</a>
+                    
                   <ul class="dropdown-menu fixButton" aria-labelledby="offcanvasNavbarDropdown">
                     <li><a class="dropdown-item" href="Secciones/ropas_mujer.html">Abrigos</a></li>
                     <li><a class="dropdown-item" href="Secciones/ropas_mujer.html">Blusas</a></li>
@@ -63,20 +61,20 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Secciones/empresa.html">EMPRESA</a>
+                  <a class="nav-link active" id="n4" aria-current="page" href="Secciones/empresa.html">EMPRESA</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Secciones/locales.html">LOCALES</a>
+                  <a class="nav-link active" id="n5" aria-current="page" href="Secciones/locales.html">LOCALES</a>
                 </li>
                 <li class="nav-item">
-                  <a href="Secciones/login.html" class="nav-link active">LOGIN
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="#073B3A" class="bi bi-person-fill logoSize2" viewBox="0 0 16 16">
+                  <a href="Secciones/login.html" id="n6" class="nav-link active i">LOGIN<svg xmlns="http://www.w3.org/2000/svg" fill="#073B3A" class="bi bi-person-fill logoSize2" viewBox="0 0 16 16">
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                  </svg>
-                </a>
+                  </svg></a>
+                  
+                
                 </li>
                 <li class="nav-item">
-                  <a href="Secciones/cart.html" class="nav-link active">SHOP
+                  <a href="Secciones/cart.html" id="n7" class="nav-link active">SHOP
                     <svg xmlns="http://www.w3.org/2000/svg" fill="#073B3A" class="bi bi-cart-fill logoSize2" viewBox="0 0 16 16">
                       <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                     </svg>
@@ -98,7 +96,7 @@
 
 
       <section class="margin--Top"> <!-- titulo promocionando los relojes-->
-        <h2 class="rebaja__Style">APROVECHA ESTOS RELOJES EN REBAJA DE PRECIO POR TIEMPO LIMITADO!</h2>
+        <h2 id="t1" class="rebaja__Style" >APROVECHA ESTOS RELOJES EN REBAJA DE PRECIO POR TIEMPO LIMITADO!</h2>
       </section>
 
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="display:flex">
@@ -112,29 +110,29 @@
               <div class="carousel-item active container-fluid">
                 <img src="https://cdn.shopify.com/s/files/1/0090/7044/4603/products/ignition-swiss-made-silver-blue-watch-564529_590x.png?v=1626273230" class="d-block d-flex justify-content-center normal--Size2 mx-auto mb-5 pb-4 img-fluid"  alt="...">
                 <div class="carousel-caption d-none d-md-block Bebas">
-                  <h5>Reloj Suizo Azul</h5>
-                  <p>10499$</p>
+                  <h5 id="r1">Reloj Suizo Azul</h5>
+                  <p id="r2">10499$</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="https://cdn.shopify.com/s/files/1/0090/7044/4603/products/strat-3-green-titanium-swiss-sport-chrono-watch-159793_590x.png?v=1619540132" class="d-block d-flex justify-content-center  normal--Size mx-auto mb-5 pb-5 img-fluid" alt="...">
                 <div class="carousel-caption d-none d-md-block Bebas">
-                  <h5>Reloj Sport Chrono Verde</h5>
-                  <p>11499$</p>
+                  <h5 id="r3">Reloj Sport Chrono Verde</h5>
+                  <p id="r4">11499$</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="https://cdn.shopify.com/s/files/1/0090/7044/4603/products/strat-3-red-titanium-swiss-sport-chrono-watch-584496_900x.png?v=1619540123" class="d-block d-flex justify-content-center normal--Size mx-auto mb-5 pb-5 img-fluid" alt="...">
                 <div class="carousel-caption d-none d-md-block Bebas">
-                  <h5>Reloj Rojo Titanio</h5>
-                  <p>11499$</p>
+                  <h5 id="r5">Reloj Rojo Titanio</h5>
+                  <p id="r6">11499$</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="https://cdn.shopify.com/s/files/1/0090/7044/4603/products/shift-red-swiss-sport-chrono-watch-298605_590x.png?v=1619540120" class="d-block d-flex justify-content-center normal--Size mx-auto mb-5 pb-5 img-fluid" alt="...">
                 <div class="carousel-caption d-none d-md-block Bebas">
-                  <h5>Reloj Chrono rojo suizo Edicion Limitada</h5>
-                  <p>13499$</p>
+                  <h5 id="r7">Reloj Chrono rojo suizo Edicion Limitada</h5>
+                  <p id="r8">13499$</p>
                 </div>
               </div>
             </div>
@@ -149,14 +147,14 @@
           </div>
 
           <section class="margin--Top">
-            <h3 class="rebaja__Style">ROPA DE ULTIMA CALIDAD EN UN 50% DE DESCUENTO CON ESTAS NUEVAS MARCAS!</h3>
+            <h3 id="t2" class="rebaja__Style">ROPA DE ULTIMA CALIDAD EN UN 50% DE DESCUENTO CON ESTAS NUEVAS MARCAS!</h3>
           </section>
 
           <div class="d-flex row justify-content-center mx-auto">
             <div class="card mx-1 my-1" style="width: 18rem;" style="border-radius: 20px;">
                 <img class="card-img-top" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/h-and-m-1586291968.jpeg?crop=1xw:1xh;center,top&resize=980:*" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title ">Camisa Fun Experience</h5>
+                  <h5 id="c1" class="card-title ">Camisa Fun Experience</h5>
                   <p class="card-text ">Camisa de tela extra fina con botones dorados, tamaños en S,M y L</p>
                   <a href="Secciones/ropas_hombre.html" class="btn btn-primary">Ir a la Sección</a>
                 </div>
@@ -164,7 +162,7 @@
               <div class="card mx-1 my-1" style="width: 18rem;" style="border-radius: 20px;">
                 <img class="card-img-top " src="https://cdn.pixabay.com/photo/2016/08/26/20/45/elan-1623092_960_720.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title ">Blusa Good Weathers</h5>
+                  <h5 id="c2" class="card-title ">Blusa Good Weathers</h5>
                   <p class="card-text ">Blusa color rojizo de tamaño entallado, excelente para salidas informales. Tamaños en S y M</p>
                   <a href="Secciones/ropas_mujer.html" class="btn btn-primary">Ir a la Sección</a>
                 </div>
@@ -172,7 +170,7 @@
               <div class="card mx-1 my-1" style="width: 18rem;" style="border-radius: 20px;">
                 <img class="card-img-top m" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/screen-shot-2020-04-07-at-4-19-19-pm-1586290763.png?crop=1xw:1xh;center,top&resize=980:*" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">Camisa Style with it</h5>
+                  <h5 id="c3" class="card-title">Camisa Style with it</h5>
                   <p class="card-text">Camisa con interior de tela fina, con una cobertura pasando la cintura para tamaños S y M</p>
                   <a href="Secciones/ropas_hombre.html" class="btn btn-primary">Ir a la Sección</a>
                 </div>
@@ -181,7 +179,7 @@
             
         <section> <!--Suscripcion futura para saber lo proximo que llegue a salir-->
 
-            <h4 class="news--media">NEWSLETTER</h4>
+            <h4 id="t3" class="news--media">NEWSLETTER</h4>
 
             <p class="news--media">SUSCRIBITE Y RECIBI NOVEDADES EN TU CASILLA DE MAIL</p>
 
@@ -218,7 +216,7 @@
 
       <div class="footerCopy margin-footer">
 
-        <h5 class="news--Left media-color margin--Top">SEGUINOS EN NUESTRAS REDES</h5>
+        <h5 id="t4" class="news--Left media-color margin--Top">SEGUINOS EN NUESTRAS REDES</h5>
 
         
         <div class="media-margin">
