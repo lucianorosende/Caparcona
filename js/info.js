@@ -36,6 +36,7 @@ for(let i = 1; i < 4; i++){
     holder4.push(document.getElementById(`c${i}`).innerHTML);
     
     
+    
 
 }
 
@@ -46,6 +47,16 @@ console.log(holder3);
 console.log(holder4);
 
 
+// este es para hacerlo con classname , usando un for of
+
+
+// const classesH = document.getElementsByClassName("card-title");
+
+// for(const classHolder of classesH){
+
+//     console.log(classHolder.innerHTML);
+
+// }
 
 
 
