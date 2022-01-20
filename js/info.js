@@ -29,9 +29,13 @@ for(let i = 1; i < 9; i++){
 
 // info de camisas
 
+
+
 for(let i = 1; i < 4; i++){
 
     holder4.push(document.getElementById(`c${i}`).innerHTML);
+    
+    
 
 }
 
