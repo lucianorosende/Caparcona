@@ -459,7 +459,7 @@ body, html {
 
 .loginBox {
   width: 300px;
-  height: 450px;
+  height: 480px;
   background-image: linear-gradient(#E6F8B2, #073B3A 150%);
   margin: 6% auto;
   position: relative;
@@ -519,14 +519,14 @@ body, html {
   cursor: pointer;
   display: block;
   margin-left: 13%;
-  margin-top: 10%;
+  margin-top: 5%;
   border: 0;
   outline: none;
   border-radius: 30px; }
 
 .check-box {
   margin-left: 5%;
-  margin-top: 11%; }
+  margin-top: 7%; }
 
 span {
   color: black;
@@ -539,3 +539,15 @@ span {
   font-size: 20px;
   text-align: center;
   margin-top: 5%; }
+
+.errorDiv {
+  background-color: black;
+  margin-top: 15px;
+  margin-left: 15px;
+  display: block;
+  color: azure;
+  padding: 5px; }
+
+.sText {
+  color: yellow;
+  padding: 2px; }
