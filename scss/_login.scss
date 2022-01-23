@@ -119,7 +119,24 @@ span{
     display: block;
     color: azure;
     padding: 5px;
+    animation-name: image;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+}
 
+@keyframes image {
+    
+
+    from{
+
+        opacity: 0;
+
+
+    }
+
+    to{
+        opacity: 1;
+    }
 }
 
 .sText{
