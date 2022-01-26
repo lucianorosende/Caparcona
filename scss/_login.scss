@@ -3,13 +3,19 @@
     
     width: 300px;
     height: 480px;
-    
-    
     background-image:linear-gradient($lightyellow , $charcoal 150%);
     margin: 6% auto;
     position: relative;
     border-radius: 10px;
     
+    
+}
+
+.regBox{
+
+    @extend .loginBox;
+    height: 520px;
+
 }
 
 .loginImg{
@@ -79,7 +85,7 @@
     padding: 10px 30px;
     cursor: pointer;
     display: block;
-    margin-left: 13%;
+    margin-left: 12%;
     margin-top: 5%;
     border: 0;
     outline: none;
@@ -113,15 +119,23 @@ span{
 
 .errorDiv{
 
-    background-color: black;
+    background-color: red;
     margin-top: 15px;
     margin-left: 15px;
+    text-align: center;
     display: block;
     color: azure;
     padding: 5px;
     animation-name: image;
     animation-iteration-count: 1;
     animation-duration: 0.4s;
+    border-radius: 15px;
+}
+
+.successDiv{
+  @extend .errorDiv;
+  background-color: green;
+  
 }
 
 @keyframes image {
@@ -144,4 +158,8 @@ span{
     color: yellow;
     padding: 2px;
 
+}
+
+.textC{
+    color: black;
 }

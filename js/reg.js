@@ -6,9 +6,20 @@ sendButton.onclick = () => {
 
 function formulary () {
     
+    let email = document.getElementById("email").value;
     let userID = document.getElementById("userID").value;
     let pw = document.getElementById("pwID").value;
     let formID = document.getElementById("logFORM");
+
+    if (email == ""){
+
+        var content = "<p class='errorDiv Bebas'>El Campo Email esta vacio!</p>";
+        document.getElementById("resultado").innerHTML = content;
+        return false;
+    }
+    else{
+        document.getElementById("resultado").innerHTML = "";
+    }
 
     if (userID == ""){
 
@@ -31,7 +42,7 @@ function formulary () {
         document.getElementById("resultado").innerHTML = "";
     }
 
-    saveData(userID, pw);
+    saveData(email, userID, pw);
 
     var content = "<p class='successDiv Bebas'>Los datos se guardaron correctamente!</p>"
     document.getElementById("resultado").innerHTML = content;
@@ -45,42 +56,20 @@ function formulary () {
 
 }
 
-function saveData (userID, pw){
+function saveData (email, userID, pw){
 
     let infoS = {
-
+        email: email,
         ID: userID,
         password: pw
     }
-    localStorage.setItem("formulario_login", JSON.stringify(infoS));
+    localStorage.setItem("formulario_register", JSON.stringify(infoS));
 
 }
 
 function loadData(){
 
-    let dataSaved = JSON.parse(localStorage.getItem("formulario_login"));
+    let dataSaved = JSON.parse(localStorage.getItem("formulario_register"));
     console.log(dataSaved);
 
 }
-
-// let logo = document.getElementById("logo");
-// let loginB = document.getElementById("loginB");
-// let regB = document.getElementById("regB");
-
-// logo.onclick = () => {
-
-//     var content = "<p class='errorDiv Bebas'>Esto es un <strong class='sText'>LOGO</strong></p>"
-//     document.getElementById("resultado").innerHTML = content;
-// }
-
-// loginB.onclick = () => {
-
-//     var content = "<p class='errorDiv Bebas'>Esto es un boton de <strong class='sText'>LOGIN</strong></p>"
-//     document.getElementById("resultado").innerHTML = content;
-// }
-
-// regB.onclick = () => {
-
-//     var content = "<p class='errorDiv Bebas'>Esto es un boton de <strong class='sText'>REGISTRAR</strong></p>"
-//     document.getElementById("resultado").innerHTML = content;
-// }
