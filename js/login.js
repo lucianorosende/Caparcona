@@ -1,54 +1,70 @@
-let sendButton = document.getElementById("btnSend");
+$("#btnSend").click(function(){
 
-sendButton.onclick = () => {
-    formulary();
-};
-
-function formulary () {
+    let userID = $('#userID').val();
+    let pw = $("#pwID").val();
+    let email = $("#email").val();
+    let name = $("#name").val();
+    let surname = $("#surname").val();
     
-    let userID = document.getElementById("userID").value;
-    let pw = document.getElementById("pwID").value;
-    let formID = document.getElementById("logFORM");
+    if (email == ""){
 
-    if (userID == ""){
-
-        var content = "<p class='errorDiv Bebas'>El Campo USER esta vacio!</p>";
-        document.getElementById("resultado").innerHTML = content;
+        $("#resultado").html("<p class='errorDiv Bebas'>El Campo Email esta vacio!</p>");
         return false;
     }
     else{
-        document.getElementById("resultado").innerHTML = "";
+        $("#resultado").html("");
+    }
+
+    if (name == ""){
+
+        $("#resultado").html(`<p class='errorDiv Bebas'>El Campo NOMBRE esta vacio!</p>`);
+        return false;
+    }
+    else{
+
+        $("#resultado").html("");
+    }
+
+    if (surname == ""){
+
+        $("#resultado").html(`<p class='errorDiv Bebas'>El Campo APELLIDO esta vacio!</p>`);
+        return false;
+    }
+    else{
+
+        $("#resultado").html("");
+    }
+
+    if (userID == ""){
+        $("#resultado").html(`<p class='errorDiv Bebas'>El Campo USER esta vacio!</p>`);
+        return false;
+
+    }
+    else{
+         $("#resultado").html("");
     }
 
     if (pw == ""){
-
-        var content = "<p class='errorDiv Bebas'>El Campo PASSWORD esta vacio!</p>";
-        document.getElementById("resultado").innerHTML = content;
+        $("#resultado").html("<p class='errorDiv Bebas'>El Campo PASSWORD esta vacio!</p>");
         return false;
     }
     else{
-
-        document.getElementById("resultado").innerHTML = "";
+        $("#resultado").html("");
     }
 
-    saveData(userID, pw);
+    saveData(email, name, surname, userID, pw);
 
-    var content = "<p class='successDiv Bebas'>Los datos se guardaron correctamente!</p>"
-    document.getElementById("resultado").innerHTML = content;
+    $("#resultado").html("<p class='successDiv Bebas'>Los datos se guardaron correctamente!</p>");
 
     loadData();
+});
 
-
-    // formID.submit();
-    // let info = `<p class=' errorDiv Bebas'>USER ID: <strong class='sText'>${userID}</strong><br>PASSWORD: <strong class='sText'>${pw}</strong></p>`  
-    // document.getElementById("resultado").innerHTML = info;
-
-}
-
-function saveData (userID, pw){
+function saveData (email, name, surname, userID, pw){
 
     let infoS = {
-
+        Email: email,
+        Nombre: name,
+        Apellido: surname,
         ID: userID,
         password: pw
     }
@@ -63,24 +79,3 @@ function loadData(){
 
 }
 
-// let logo = document.getElementById("logo");
-// let loginB = document.getElementById("loginB");
-// let regB = document.getElementById("regB");
-
-// logo.onclick = () => {
-
-//     var content = "<p class='errorDiv Bebas'>Esto es un <strong class='sText'>LOGO</strong></p>"
-//     document.getElementById("resultado").innerHTML = content;
-// }
-
-// loginB.onclick = () => {
-
-//     var content = "<p class='errorDiv Bebas'>Esto es un boton de <strong class='sText'>LOGIN</strong></p>"
-//     document.getElementById("resultado").innerHTML = content;
-// }
-
-// regB.onclick = () => {
-
-//     var content = "<p class='errorDiv Bebas'>Esto es un boton de <strong class='sText'>REGISTRAR</strong></p>"
-//     document.getElementById("resultado").innerHTML = content;
-// }
