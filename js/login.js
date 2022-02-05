@@ -1,62 +1,57 @@
-$("#btnSend").click(function(){
+$("#btnSend").click(() => {
 
-    let userID = $('#userID').val();
-    let pw = $("#pwID").val();
-    let email = $("#email").val();
-    let name = $("#name").val();
-    let surname = $("#surname").val();
+    let data = {
+
+        user: $('#userID').val(),
+        pw: $("#pwID").val(),
+        email: $("#email").val(),
+        name: $("#name").val(),
+        surname: $("#surname").val()
+
+    }
     
-    if (email == ""){
+    if (data.email == ""){
 
-        $("#resultado").html("<p class='errorDiv Bebas'>El Campo Email esta vacio!</p>");
+        $("#resultado").html("<p class='errorDiv Bebas'>El Campo Email esta vacio!</p>").hide().fadeIn(800);
+        return false;
+        
+    }
+
+    else if (data.name == ""){
+
+        $("#resultado").html(`<p class='errorDiv Bebas'>El Campo NOMBRE esta vacio!</p>`).hide().fadeIn(800);
         return false;
     }
+
+    else if (data.surname == ""){
+
+        $("#resultado").html(`<p class='errorDiv Bebas'>El Campo APELLIDO esta vacio!</p>`).hide().fadeIn(800);
+        return false;   
+    }
+
+    else if (data.user == ""){
+        $("#resultado").html(`<p class='errorDiv Bebas'>El Campo USER esta vacio!</p>`).hide().fadeIn(800);
+        return false;
+
+    }
+
+    else if (data.pw == ""){
+        $("#resultado").html("<p class='errorDiv Bebas'>El Campo PASSWORD esta vacio!</p>").hide().fadeIn(800);
+        return false;
+    }
+
     else{
         $("#resultado").html("");
     }
 
-    if (name == ""){
+    saveData(data.email, data.name, data.surname, data.user, data.pw);
 
-        $("#resultado").html(`<p class='errorDiv Bebas'>El Campo NOMBRE esta vacio!</p>`);
-        return false;
-    }
-    else{
+    $("#resultado").html("<p class='successDiv Bebas'>Los datos se guardaron correctamente!</p>").hide().fadeIn(800, () => {console.log("Estos son tus datos del Formulario")}).delay(2000).slideUp();
 
-        $("#resultado").html("");
-    }
-
-    if (surname == ""){
-
-        $("#resultado").html(`<p class='errorDiv Bebas'>El Campo APELLIDO esta vacio!</p>`);
-        return false;
-    }
-    else{
-
-        $("#resultado").html("");
-    }
-
-    if (userID == ""){
-        $("#resultado").html(`<p class='errorDiv Bebas'>El Campo USER esta vacio!</p>`);
-        return false;
-
-    }
-    else{
-         $("#resultado").html("");
-    }
-
-    if (pw == ""){
-        $("#resultado").html("<p class='errorDiv Bebas'>El Campo PASSWORD esta vacio!</p>");
-        return false;
-    }
-    else{
-        $("#resultado").html("");
-    }
-
-    saveData(email, name, surname, userID, pw);
-
-    $("#resultado").html("<p class='successDiv Bebas'>Los datos se guardaron correctamente!</p>");
 
     loadData();
+    
+    
 });
 
 function saveData (email, name, surname, userID, pw){
@@ -74,8 +69,10 @@ function saveData (email, name, surname, userID, pw){
 
 function loadData(){
 
+
     let dataSaved = JSON.parse(localStorage.getItem("formulario_login"));
-    console.log(dataSaved);
+    setTimeout(() => {console.log(dataSaved)}, 1500)
+    
 
 }
 

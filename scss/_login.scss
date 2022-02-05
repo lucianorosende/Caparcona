@@ -126,9 +126,9 @@ span{
     display: block;
     color: azure;
     padding: 5px;
-    animation-name: image;
-    animation-iteration-count: 1;
-    animation-duration: 0.4s;
+    // animation-name: image;
+    // animation-iteration-count: 1;
+    // animation-duration: 0.4s;
     border-radius: 15px;
 }
 
@@ -138,27 +138,20 @@ span{
   
 }
 
-@keyframes image {
+// @keyframes image {
     
 
-    from{
+//     from{
 
-        opacity: 0;
+//         opacity: 0;
 
 
-    }
+//     }
 
-    to{
-        opacity: 1;
-    }
-}
-
-.sText{
-
-    color: yellow;
-    padding: 2px;
-
-}
+//     to{
+//         opacity: 1;
+//     }
+// }
 
 .textC{
     color: black;
