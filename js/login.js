@@ -9,7 +9,7 @@ $("#btnSend").click(() => {
         surname: $("#surname").val()
 
     }
-    
+
     if (data.email == ""){
 
         $("#resultado").html("<p class='errorDiv Bebas'>El Campo Email esta vacio!</p>").hide().fadeIn(800);
@@ -71,8 +71,6 @@ function loadData(){
 
 
     let dataSaved = JSON.parse(localStorage.getItem("formulario_login"));
-    setTimeout(() => {console.log(dataSaved)}, 1500)
+    setTimeout(() => {console.log(dataSaved)}, 1500);
     
-
 }
-
