@@ -556,5 +556,17 @@ span {
 .successDiv {
   background-color: green; }
 
+.fx {
+  animation-name: image;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+
+@keyframes image {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 .textC {
   color: black; }

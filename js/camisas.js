@@ -19,12 +19,12 @@ $.get(ROPAURL, (response, state) => {
                                                     </ul>
         
                                             </div>
-                                        </div>`) 
+                                        </div>`)
         
                                        
         }
 
-
+        
     }
 
 })
