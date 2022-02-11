@@ -3,8 +3,8 @@ const ROPAURL = "../data/ropa.json"
 $.get(ROPAURL, (response, state) => {
 
     if(state === "success"){
-        for (let i = 0; i <= 17; i++) {
-
+        for (let i = 0; i < response.dataropa.length; i++) {
+            
             if(i >= 0 && i <= 2){
             $("#container-camisas").append(`<div class=" col-xl-4 col-md-6 d-flex justify-content-center Bebas">
                                             <div class="card mt-3" style="width: 18rem;">
