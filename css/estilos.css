@@ -548,13 +548,15 @@ span {
   margin-top: 15px;
   margin-left: 15px;
   text-align: center;
-  display: block;
+  display: flex;
   color: azure;
   padding: 5px;
   border-radius: 15px; }
 
 .successDiv {
-  background-color: green; }
+  background-color: green;
+  width: 70%;
+  justify-content: center; }
 
 .fx {
   animation-name: image;

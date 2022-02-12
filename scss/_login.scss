@@ -123,7 +123,7 @@ span{
     margin-top: 15px;
     margin-left: 15px;
     text-align: center;
-    display: block;
+    display: flex;
     color: azure;
     padding: 5px;
     // animation-name: image;
@@ -135,6 +135,8 @@ span{
 .successDiv{
   @extend .errorDiv;
   background-color: green;
+  width: 70%;
+  justify-content: center;
   
 }
 
