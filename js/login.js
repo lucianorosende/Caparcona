@@ -57,19 +57,53 @@ function loginScreen(){
 
    let dataSaved = JSON.parse(localStorage.getItem("formulario_login"));
 
+    if(dataSaved.Apellido){
+        Swal.fire(
+            
+            'Felicidades!',
+            'Te has suscrito!',
+            'success'
+            
+            ) 
+        } 
+   else if (dataSaved.Email){
     Swal.fire(
+        
         'Felicidades!',
-        'Completaste tus Datos!',
+        'Te registraste!',
         'success'
+        
+      )
+   }
+
+   else if(dataSaved.Id){
+
+    Swal.fire(
+        
+        'Felicidades!',
+        'Te has logeado!',
+        'success'
+        
       )
 
-    $(".log-change").html("");
-    $(".log-change").append(`<p class='successDiv Bebas'>Bienvenido <span class=''>${dataSaved.Id}!</span></p>`);
-    $(".reg-change").html("");
-    $(".reg-change").append(`<p class='successDiv Bebas'>YA ESTAS REGISTRADO!</p>`);
-    $(".sub-change").html("");
-    $(".sub-change").append(`<p class='successDiv Bebas'>TE SUSCRIBISTE!</p>`);
+   }
+   
+   $(".log-change").html("");
+   $(".log-change").append(`<p class='successDiv Bebas'>Bienvenido <span class=''>${dataSaved.Id}!</span></p>`);
+   $(".reg-change").html("");
+   $(".reg-change").append(`<p class='successDiv Bebas'>YA ESTAS REGISTRADO!</p>`);
+   $(".sub-change").html("");
+   $(".sub-change").append(`<p class='successDiv Bebas'>TE SUSCRIBISTE!</p>`);
+   
 }
+
+   
+    
+    
+    
+
+
+
 
 
 
