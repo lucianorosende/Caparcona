@@ -56,8 +56,10 @@ function saveData (userID, pw, email, name, surname){
 function loginScreen(){
 
    let dataSaved = JSON.parse(localStorage.getItem("formulario_login"));
+   console.log($("#btnSend").html())
+    
 
-    if(dataSaved.Apellido){
+    if($("#btnSend").html() === "Suscribirse"){
         Swal.fire(
             
             'Felicidades!',
@@ -66,7 +68,7 @@ function loginScreen(){
             
             ) 
         } 
-   else if (dataSaved.Email){
+   else if ($("#btnSend").html() === "Registrarse"){
     Swal.fire(
         
         'Felicidades!',
@@ -76,7 +78,7 @@ function loginScreen(){
       )
    }
 
-   else if(dataSaved.Id){
+   else if($("#btnSend").html() === "Log in"){
 
     Swal.fire(
         
