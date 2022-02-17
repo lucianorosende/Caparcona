@@ -2,10 +2,7 @@ $("#btnSend").click(() => {
 
     let data = [
         $('#userID').val(),
-        $("#pwID").val(),
-        $("#email").val(),
-        $("#name").val(),
-        $("#surname").val()
+        $("#pwID").val()
     ]
 
     for(let i = 0; i < data.length; i++){
@@ -20,87 +17,44 @@ $("#btnSend").click(() => {
 
         }
 
-    }        
-    saveData(data[0], data[1], data[2], data[3], data[4]);
-    loadData();
-    loginScreen();
+    }    
 
-   
+    loginCheck();
 });
 
-function saveData (userID, pw, email, name, surname){
-
-    let infoS = {
-        Email: email,
-        Nombre: name,
-        Apellido: surname,
-        Id: userID,
-        Password: pw
-    }
-    localStorage.setItem("formulario_login", JSON.stringify(infoS));
-
-}
-
- function loadData(){
-
-
-   let dataSaved = JSON.parse(localStorage.getItem("formulario_login"));
-   console.log("Los datos del formulario");
-   console.log(dataSaved);
-   
+function loginCheck (){
+    
+    let regInfo = JSON.parse(localStorage.getItem("formulario_reg"));
     
     
-    
- }
-
-function loginScreen(){
-
-   let dataSaved = JSON.parse(localStorage.getItem("formulario_login"));
-   console.log($("#btnSend").html())
-    
-
-    if($("#btnSend").html() === "Suscribirse"){
-        Swal.fire(
+        if(regInfo.Id === $('#userID').val()){
+            Swal.fire({
+                icon: 'error',
+                text: 'Colocaste mal tus datos!'
+                
+              })
+            if(regInfo.Password === $("#pwID").val()){
+                Swal.fire(
             
-            'Felicidades!',
-            'Te has suscrito!',
-            'success'
-            
-            ) 
+                    'Felicidades!',
+                    'Te has logeado!',
+                    'success'
+                    
+                    )
+                $(".log-change").html("");     
+                $(".log-change").append(`<p class='successDiv Bebas'>Bienvenido <span class=''>${regInfo.Id}!</span></p>`);
+                
+        }
         } 
-   else if ($("#btnSend").html() === "Registrarse"){
-    Swal.fire(
-        
-        'Felicidades!',
-        'Te registraste!',
-        'success'
-        
-      )
-   }
+        else {
+            Swal.fire({
+                icon: 'error',
+                text: 'Colocaste mal tus datos!'
+                
+              })
 
-   else if($("#btnSend").html() === "Log in"){
-
-    Swal.fire(
-        
-        'Felicidades!',
-        'Te has logeado!',
-        'success'
-        
-      )
-
-   }
-   
-   $(".log-change").html("");
-   $(".log-change").append(`<p class='successDiv Bebas'>Bienvenido <span class=''>${dataSaved.Id}!</span></p>`);
-   $(".reg-change").html("");
-   $(".reg-change").append(`<p class='successDiv Bebas'>YA ESTAS REGISTRADO!</p>`);
-   $(".sub-change").html("");
-   $(".sub-change").append(`<p class='successDiv Bebas'>TE SUSCRIBISTE!</p>`);
-   
-}
-
-   
-    
+        }
+       }
     
     
 
