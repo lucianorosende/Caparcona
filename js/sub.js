@@ -20,7 +20,8 @@ class Subscription {
 
             }       
         }   
-
+        this.dataCheck();
+        this.dataLog();
 
     }
 
@@ -64,7 +65,5 @@ class Subscription {
 
 $("#btnSend").click(() => {
 
-    let sub = new Subscription($("#email").val(),$("#name").val(),$("#surname").val());
-    sub.dataCheck();
-    sub.dataLog();
+    new Subscription($("#email").val(),$("#name").val(),$("#surname").val());
 });

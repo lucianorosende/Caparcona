@@ -21,6 +21,13 @@ class Login {
 
         }  
 
+      this.loginCheck();  
+
+    }
+
+
+    loginCheck(){
+
         let regInfo = JSON.parse(localStorage.getItem("formulario_reg"));
 
         if(regInfo.Usuario === this.user){
@@ -51,17 +58,16 @@ class Login {
               })
 
         }
-
     }
 
-    
 }    
     
 
 
 $("#btnSend").click(() => {
 
-    const log = new Login($('#userID').val(),$("#pwID").val());
+   new Login($('#userID').val(),$("#pwID").val());
+   
 });
 
 

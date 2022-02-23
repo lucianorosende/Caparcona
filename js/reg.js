@@ -20,7 +20,8 @@ class Register {
 
             }       
         }   
-
+        this.dataCheck();
+        this.dataLog();
 
     }
 
@@ -64,7 +65,6 @@ class Register {
 
 $("#btnSend").click(() => {
 
-    let reg = new Register($('#userID').val(),$("#pwID").val(),$("#email").val());
-    reg.dataCheck();
-    reg.dataLog();
+    new Register($('#userID').val(),$("#pwID").val(),$("#email").val());
+    
 });
