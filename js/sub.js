@@ -1,60 +1,70 @@
-$("#btnSend").click(() => {
+class Subscription {
 
-    let data = [
-        $("#email").val(),
-        $("#name").val(),
-        $("#surname").val()
-    ]
+    constructor(email, name, surname){
 
-    for(let i = 0; i < data.length; i++){
+        const data = [
+            this.email = email,
+            this.name = name,
+            this.surname = surname
+        ]
+        
+        for(let i = 0; i < data.length; i++){
 
-        if (data[i] == ""){
-            Swal.fire({
-                icon: 'error',
-                text: 'Faltan datos para completar!'
-                
-              })
-            return false;
+            if (data[i] == ""){
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Faltan datos para completar!'
+                    
+                })
+                return false;
 
-        }
+            }       
+        }   
 
-    }        
-    dataCheck(data[0], data[1], data[2]);
-    dataLog();
 
-});
-
-function dataCheck (email, name, surname){
-
-    let infoS = {
-        Email: email,
-        Nombre: name,
-        Apellido: surname
     }
 
-    localStorage.setItem("formulario_sub", JSON.stringify(infoS));
+    dataCheck(){
 
-    if ($("#btnSend").html() === "Suscribirse"){
-        Swal.fire(
-            
-            'Felicidades!',
-            'Te suscribiste!',
-            'success'
-            
-          )
-       }
-    $(".sub-change").html("");
-    $(".sub-change").append(`<p class='successDiv Bebas'>TE SUSCRIBISTE!</p>`);
-}
+            let infoS = {
+                Email: this.email,
+                Nombre: this.name,
+                Apellido: this.surname
+            }
 
- function dataLog(){
+            localStorage.setItem("formulario_sub", JSON.stringify(infoS));
+
+            if ($("#btnSend").html() === "Suscribirse"){
+                Swal.fire(
+                    
+                    'Felicidades!',
+                    'Te suscribiste!',
+                    'success'
+                    
+                )
+            }
+            $(".sub-change").html("");
+            $(".sub-change").append(`<p class='successDiv Bebas'>TE SUSCRIBISTE!</p>`);
+               
 
 
-   let dataSaved = JSON.parse(localStorage.getItem("formulario_sub"));
-   console.log("Los datos del formulario");
-   console.log(dataSaved);
-   
+    }
+
+    dataLog(){
+
+        let dataSaved = JSON.parse(localStorage.getItem("formulario_sub"));
+        console.log("Los datos del formulario");
+        console.log(dataSaved);
+
+    }
     
+}    
     
-    
- }
+
+
+$("#btnSend").click(() => {
+
+    let sub = new Subscription($("#email").val(),$("#name").val(),$("#surname").val());
+    sub.dataCheck();
+    sub.dataLog();
+});

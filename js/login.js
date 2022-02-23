@@ -1,39 +1,35 @@
-$("#btnSend").click(() => {
+class Login {
 
-    let data = [
-        $('#userID').val(),
-        $("#pwID").val()
-    ]
+    constructor(user, pw){
 
-    for(let i = 0; i < data.length; i++){
+        const data = [
+            this.user = user,
+            this.pw = pw
+        ]
+        
+        for(let i = 0; i < data.length; i++){
 
-        if (data[i] == ""){
-            Swal.fire({
-                icon: 'error',
-                text: 'Faltan datos para completar!'
-                
-              })
-            return false;
+            if (data[i] == ""){
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Faltan datos para completar!'
+                    
+                })
+                return false;
 
-        }
+            }  
 
-    }    
+        }  
 
-    loginCheck();
-});
+        let regInfo = JSON.parse(localStorage.getItem("formulario_reg"));
 
-function loginCheck (){
-    
-    let regInfo = JSON.parse(localStorage.getItem("formulario_reg"));
-    
-    
-        if(regInfo.Id === $('#userID').val()){
+        if(regInfo.Usuario === this.user){
             Swal.fire({
                 icon: 'error',
                 text: 'Colocaste mal tus datos!'
                 
               })
-            if(regInfo.Password === $("#pwID").val()){
+            if(regInfo.Password === this.pw){
                 Swal.fire(
             
                     'Felicidades!',
@@ -42,10 +38,11 @@ function loginCheck (){
                     
                     )
                 $(".log-change").html("");     
-                $(".log-change").append(`<p class='successDiv Bebas'>Bienvenido <span class=''>${regInfo.Id}!</span></p>`);
+                $(".log-change").append(`<p class='successDiv Bebas'>Bienvenido <span class=''>${regInfo.Usuario}!</span></p>`);
                 
         }
         } 
+
         else {
             Swal.fire({
                 icon: 'error',
@@ -54,11 +51,18 @@ function loginCheck (){
               })
 
         }
-       }
+
+    }
+
     
+}    
     
 
 
+$("#btnSend").click(() => {
+
+    const log = new Login($('#userID').val(),$("#pwID").val());
+});
 
 
 
