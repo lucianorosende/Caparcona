@@ -5,7 +5,9 @@ class Subscription {
         const data = [
             this.email = email,
             this.name = name,
-            this.surname = surname
+            this.surname = surname,
+            this.format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+            this.nameFormat = /^[A-Za-z ]+$/
         ]
         
         for(let i = 0; i < data.length; i++){
@@ -20,22 +22,48 @@ class Subscription {
 
             }       
         }   
-        this.dataCheck();
-        this.dataLog();
 
+        this.dataCheck();
+        
     }
 
     dataCheck(){
-
+    
             let infoS = {
                 Email: this.email,
                 Nombre: this.name,
                 Apellido: this.surname
             }
 
+            
+
             localStorage.setItem("formulario_sub", JSON.stringify(infoS));
 
-            if ($("#btnSend").html() === "Suscribirse"){
+            if(!this.email.match(this.format)){
+
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Colocaste mal tu email'
+                    
+                })
+
+            }
+            else if(this.name.length && this.surname.length < 4){  
+                Swal.fire({
+                    icon: 'error',
+                    text: 'el nombre o apellido son muy cortos!'
+                    
+                })
+            }
+            else if(!this.name.match(this.nameFormat) || !this.surname.match(this.nameFormat) ){
+                Swal.fire({
+                    icon: 'error',
+                    text: 'El nombre o apellido no puede tener numeros!'
+                    
+                })
+
+            }
+            else{
                 Swal.fire(
                     
                     'Felicidades!',
@@ -43,6 +71,7 @@ class Subscription {
                     'success'
                     
                 )
+                this.dataLog();
             }
             $(".sub-change").html("");
             $(".sub-change").append(`<p class='successDiv Bebas'>TE SUSCRIBISTE!</p>`);
@@ -60,10 +89,5 @@ class Subscription {
     }
     
 }    
-    
 
-
-$("#btnSend").click(() => {
-
-    new Subscription($("#email").val(),$("#name").val(),$("#surname").val());
-});
+export default Subscription;

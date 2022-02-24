@@ -46,6 +46,7 @@ class Login {
                     )
                 $(".log-change").html("");     
                 $(".log-change").append(`<p class='successDiv Bebas'>Bienvenido <span class=''>${regInfo.Usuario}!</span></p>`);
+                console.log(`Bienvenido a la pagina ${regInfo.Usuario}!`)
                 
         }
         } 
@@ -63,14 +64,7 @@ class Login {
 }    
     
 
-
-$("#btnSend").click(() => {
-
-   new Login($('#userID').val(),$("#pwID").val());
-   
-});
-
-
+export default Login;
 
 
 

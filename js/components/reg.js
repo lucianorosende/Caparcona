@@ -5,7 +5,8 @@ class Register {
         const data = [
             this.email = email,
             this.user = user,
-            this.pw = pw
+            this.pw = pw,
+            this.format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
         ]
         
         for(let i = 0; i < data.length; i++){
@@ -20,8 +21,10 @@ class Register {
 
             }       
         }   
+
         this.dataCheck();
-        this.dataLog();
+
+        
 
     }
 
@@ -35,7 +38,23 @@ class Register {
 
             localStorage.setItem("formulario_reg", JSON.stringify(infoS));
 
-            if ($("#btnSend").html() === "Registrarse"){
+            if(!this.email.match(this.format)){
+
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Colocaste mal tu email'
+                    
+                })
+
+            }
+            else if(this.user.length && this.pw.length < 6){  
+                Swal.fire({
+                    icon: 'error',
+                    text: 'El usuario o password son muy cortos!'
+                    
+                })
+            }
+            else{
                 Swal.fire(
                     
                     'Felicidades!',
@@ -43,6 +62,7 @@ class Register {
                     'success'
                     
                 )
+                this.dataLog();
             }
             $(".reg-change").html("");
             $(".reg-change").append(`<p class='successDiv Bebas'>YA ESTAS REGISTRADO!</p>`);
@@ -61,10 +81,4 @@ class Register {
     
 }    
     
-
-
-$("#btnSend").click(() => {
-
-    new Register($('#userID').val(),$("#pwID").val(),$("#email").val());
-    
-});
+export default Register;
