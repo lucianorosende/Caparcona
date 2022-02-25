@@ -461,7 +461,7 @@ body, html {
   .cart-sm {
     display: flex;
     justify-content: center; }
-  .textC {
+  .text-sm {
     display: none; } }
 
 .loginBox, .regBox {
