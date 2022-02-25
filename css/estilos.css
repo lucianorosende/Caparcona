@@ -460,7 +460,9 @@ body, html {
     display: none; }
   .cart-sm {
     display: flex;
-    justify-content: center; } }
+    justify-content: center; }
+  .textC {
+    display: none; } }
 
 .loginBox, .regBox {
   width: 300px;
