@@ -281,6 +281,16 @@ body, html {
 
 /* DESKTOP */
 @media (min-width: 1200px) {
+  .cart-page {
+    margin: 30px 90px 90px 90px;
+    color: white; }
+  .total-price {
+    display: flex;
+    justify-content: flex-end; }
+  td:last-child {
+    text-align: right; }
+  th:last-child {
+    text-align: right; }
   .normal--Size {
     width: 40%;
     height: 40%;
@@ -300,6 +310,16 @@ body, html {
 
 /* TABLET */
 @media (min-width: 576px) and (max-width: 1199px) {
+  .cart-page {
+    margin: 30px 90px 90px 90px;
+    color: white; }
+  .total-price {
+    display: flex;
+    justify-content: flex-end; }
+  td:last-child {
+    text-align: right; }
+  th:last-child {
+    text-align: right; }
   nav {
     font-family: 'Bebas Neue', cursive; }
   .rebaja__Style {
@@ -462,7 +482,19 @@ body, html {
     display: flex;
     justify-content: center; }
   .text-sm {
-    display: none; } }
+    display: none; }
+  table {
+    width: 100%; }
+  .cart-page {
+    margin: 5%;
+    color: white; }
+  .total-price {
+    display: flex;
+    justify-content: flex-end; }
+  td:last-child {
+    text-align: end; }
+  th:last-child {
+    text-align: end; } }
 
 .loginBox, .regBox {
   width: 300px;
@@ -580,10 +612,6 @@ span {
 .textC {
   color: black; }
 
-.cart-page {
-  margin: 30px 90px 90px 90px;
-  color: white; }
-
 table {
   width: 100%;
   border-collapse: collapse; }
@@ -594,7 +622,7 @@ table {
 
 th {
   text-align: left;
-  padding: 5px;
+  padding: 10px;
   color: #fff;
   background-color: #ff523b; }
 
@@ -604,7 +632,8 @@ td {
 td input {
   width: 40px;
   height: 30px;
-  padding: 5px; }
+  padding: 5px;
+  margin: 15px; }
 
 td a {
   color: #ff523b;
@@ -616,17 +645,7 @@ td img {
   margin-right: 10px;
   border-radius: 3px; }
 
-.total-price {
-  display: flex;
-  justify-content: flex-end; }
-
 .total-price table {
   border-top: 3px solid #ff523b;
   width: 100%;
   max-width: 400px; }
-
-td:last-child {
-  text-align: right; }
-
-th:last-child {
-  text-align: right; }
