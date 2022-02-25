@@ -328,6 +328,12 @@
         @include gridItem(goUp);
     }
 
-
+    .cart-info p{
+        display: none;
+    }
+    .cart-sm{
+        display: flex;
+        justify-content: center;
+    }
 
     }

@@ -455,7 +455,12 @@ body, html {
   .copyArea {
     grid-area: copyArea; }
   .goUp {
-    grid-area: goUp; } }
+    grid-area: goUp; }
+  .cart-info p {
+    display: none; }
+  .cart-sm {
+    display: flex;
+    justify-content: center; } }
 
 .loginBox, .regBox {
   width: 300px;
@@ -572,3 +577,54 @@ span {
 
 .textC {
   color: black; }
+
+.cart-page {
+  margin: 100px;
+  color: white; }
+
+table {
+  width: 100%;
+  border-collapse: collapse; }
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap; }
+
+th {
+  text-align: left;
+  padding: 5px;
+  color: #fff;
+  background-color: #ff523b; }
+
+td {
+  padding: 10px 5px; }
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px; }
+
+td a {
+  color: #ff523b;
+  font-size: 12px; }
+
+td img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 3px; }
+
+.total-price {
+  display: flex;
+  justify-content: flex-end; }
+
+.total-price table {
+  border-top: 3px solid #ff523b;
+  width: 100%;
+  max-width: 400px; }
+
+td:last-child {
+  text-align: right; }
+
+th:last-child {
+  text-align: right; }
