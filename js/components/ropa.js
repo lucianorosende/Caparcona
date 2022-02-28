@@ -8,8 +8,16 @@ export default function renderClothing(){
     
     
     $.get(ROPAURL, (response, state) => {
-        let names = JSON.parse(localStorage.getItem('addToCart')) || []
+        
+        let value = JSON.parse(localStorage.getItem('CartValue')) || [];
+        let names = JSON.parse(localStorage.getItem('addToCart')) || [];
+        let totalPaying = JSON.parse(localStorage.getItem('totalPaying')) || [];
+
         localStorage.setItem("addToCart", JSON.stringify(names));
+        localStorage.setItem("CartValue", JSON.stringify(value));
+        localStorage.setItem("totalPaying", JSON.stringify(totalPaying));
+        let total = 0;
+        
         
 
         if(state === "success"){
@@ -130,10 +138,10 @@ export default function renderClothing(){
                 $(`#${response.dataropa[i].id}`).click(() => {
                     
                   
-                    // let precio = currency(dataropa.precio);
+                    
                     // if($(`#${response.dataropa[i].id}`)){
                         
-                     let drawer =  `<tr id="cart-container">
+                     let drawer =  `<tr>
                     <td>
                       <div class="cart-info Bebas">
                           <img class="size" src="${response.dataropa[i].img}" alt="">
@@ -151,19 +159,61 @@ export default function renderClothing(){
                     </td>
                   </tr>
                   `;
-                    
-                  
+
                   let adder = JSON.parse(localStorage.getItem("addToCart"));
+
                   adder.push(drawer);
+                
                   localStorage.setItem("addToCart", JSON.stringify(adder));
-                    
-                    // localStorage.setItem("cartAdded", html);
-                    
-                    // JSON.parse(localStorage.getItem("addToCart")).push(html);
-                    
+
                     
 
-                    //   console.log(`este es el id del item ${response.dataropa[i].id} ${localStorage.getItem("addToCart")}`)
+                    
+                  let itemValue = JSON.parse(localStorage.getItem("CartValue"));
+
+                  let valueAdd = itemValue.push(parseInt(`${response.dataropa[i].precio}`))
+
+                  localStorage.setItem("CartValue", JSON.stringify(itemValue));
+
+                  let array = JSON.parse(localStorage.getItem("CartValue")); 
+                  
+                  const sumWithInitial = array.reduce(
+                    (previousValue, currentValue) => previousValue + currentValue,
+                    total
+                  );
+
+                  
+                    let base = `<table class="total-price">
+                        <tr>
+                        <td>Subtotal</td>
+                        <td>${sumWithInitial}</td>
+                        </tr>
+                        <tr>
+                        <td>tax</td>
+                        <td id="table-foot"></td>
+                        </tr>
+                        <tr>
+                        <td>Total</td>
+                        <td id="table-foot"></td>
+                        </tr>
+                        </table>`
+                  
+                    let footer = JSON.parse(localStorage.getItem("totalPaying"));
+
+                    footer.push(base);
+                      
+                    localStorage.setItem("totalPaying", JSON.stringify(footer));
+                
+                
+                  
+                  
+                    
+
+        
+            
+
+                  
+                    
                     return false;
                     // }
                     
@@ -197,7 +247,8 @@ export default function renderClothing(){
 
        
      $("#cart-container").html(JSON.parse(localStorage.getItem("addToCart")));
-        
+     $("#table-foot").html(JSON.parse(localStorage.getItem("totalPaying")));
+     
            
 }
 
