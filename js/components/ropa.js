@@ -1,14 +1,21 @@
 
 const ROPAURL = "../data/ropa.json"
 
+    
 
 
 export default function renderClothing(){
-
+    
     
     $.get(ROPAURL, (response, state) => {
+        let names = JSON.parse(localStorage.getItem('addToCart')) || []
+        localStorage.setItem("addToCart", JSON.stringify(names));
+        
 
         if(state === "success"){
+            
+            
+
             for (let i = 0; i < response.dataropa.length; i++) {
                 
                 
@@ -120,22 +127,13 @@ export default function renderClothing(){
                 }
 
                 
-                let html = `<table><tr>
-                <th>Producto</th>
-                <th>Cantidad</th>
-                <th>Subtotal</th>
-                </tr>
-                `;
-                
-
                 $(`#${response.dataropa[i].id}`).click(() => {
-
                     
-                   
-
-                  for (let dataropa of response.dataropa) {
+                  
                     // let precio = currency(dataropa.precio);
-                    html += `<tr>
+                    // if($(`#${response.dataropa[i].id}`)){
+                        
+                     let drawer =  `<tr id="cart-container">
                     <td>
                       <div class="cart-info Bebas">
                           <img class="size" src="${response.dataropa[i].img}" alt="">
@@ -149,21 +147,39 @@ export default function renderClothing(){
                     </td>
                     <td><input type="number" value="1">
                     </td>
-                    <td>$50
+                    <td>${response.dataropa[i].precio}
                     </td>
                   </tr>
                   `;
                     
-                }
                   
-                  
+                  let adder = JSON.parse(localStorage.getItem("addToCart"));
+                  adder.push(drawer);
+                  localStorage.setItem("addToCart", JSON.stringify(adder));
                     
-                    localStorage.setItem("addToCart", html);
+                    // localStorage.setItem("cartAdded", html);
+                    
+                    // JSON.parse(localStorage.getItem("addToCart")).push(html);
+                    
+                    
+
+                    //   console.log(`este es el id del item ${response.dataropa[i].id} ${localStorage.getItem("addToCart")}`)
+                    return false;
+                    // }
+                    
+                  
+                });
+              
+               
+
+                
+
+                    
                     
     
-                })
+            }
                 
-                   
+                
                 
                 
 
@@ -171,23 +187,17 @@ export default function renderClothing(){
 
 
                                    
-            }
+        }
 
             
 
-        }
-        let sexoxo = localStorage.getItem("addToCart");
-
-        
-            $("#cart-container").html(sexoxo);
-       
-        
     })
+         
+  
 
+       
+     $("#cart-container").html(JSON.parse(localStorage.getItem("addToCart")));
+        
+           
 }
-
-
-
-                                
-
 
