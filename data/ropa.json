@@ -4,7 +4,8 @@
     "title":"CUADROS DE LUZ",
     "info":"Camisa de tela fina, hecha en india, genial para climas veraniegos",
     "precio":"$9200 ARS",
-    "sexo":"HOMBRE"
+    "sexo":"HOMBRE",
+    "id": 1
  },
 
  {
@@ -12,56 +13,66 @@
     "title":"PUNTOS VIOLETAS",
     "info":"Camisa entallada, en tamaños S y M , para usos informales",
     "precio":"$7660 ARS",
-    "sexo":"HOMBRE"
+    "sexo":"HOMBRE",
+    "id": 2
  },
  {
     "img":"https://ae01.alicdn.com/kf/H3d6f2b005f974a74a3e59f7f3f7eaca9Q/2021-Brand-Casual-Spring-Luxury-Plaid-Long-Sleeve-Slim-Fit-Men-Shirt-Streetwear-Social-Dress-Shirts.jpg_Q90.jpg_.webp",
     "title":"SUNNY GRAY",
     "info":"Camisa manga larga, para uso en invierno/primavera, estilo formal",
     "precio":"$8500 ARS",
-    "sexo":"HOMBRE"
+    "sexo":"HOMBRE",
+    "id": 3
+    
  },
  {
     "img":"https://images.dxl.com/is/image/CasualMale/Tees_Long-Sleeve_1041",
     "title":"UNDEFINED SHIRT",
     "info":"Remera para un pijama ideal",
     "precio":"$4200 ARS",
-    "sexo":"HOMBRE"
+    "sexo":"HOMBRE",
+    "id": 4
+    
  },
  {
     "img":"https://images.dxl.com/is/image/CasualMale/Tees_Henley_1041",
     "title":"Violet sunset",
     "info":"Remera informal ideal para un boliche",
     "precio":"$3999 ARS",
-    "sexo":"HOMBRE"
+    "sexo":"HOMBRE",
+    "id": 5
  },
  {
     "img":"https://images.dxl.com/is/image/CasualMale/Tees_Crewneck_1041_",
     "title":"Simple blue",
     "info":"Remera tipica para usos del dia a dia",
     "precio":"$2800 ARS",
-    "sexo":"HOMBRE"
+    "sexo":"HOMBRE",
+    "id": 6
  },
  {
     "img":"https://escollection.es/14974-thickbox_default/ts255-open-mesh-tank-top.jpg",
     "title":"Spot tank",
     "info":"Musculosa con hoyos para aire mas refrescante, version Blanca",
     "precio":"$5300 ARS",
-    "sexo":"HOMBRE"
+    "sexo":"HOMBRE",
+    "id": 7
  },
  {
     "img":"https://escollection.es/14977-thickbox_default/ts255-open-mesh-tank-top.jpg",
     "title":"Spot tank black",
     "info":"Musculosa con hoyos, version negra",
     "precio":"$5300 ARS",
-    "sexo":"HOMBRE"
+    "sexo":"HOMBRE",
+    "id": 8
  },
  {
     "img":"https://escollection.es/17536-thickbox_default/ts119-basic-tanktop.jpg",
     "title":"Gym tank",
     "info":"Musculosa entallada, ideal para absorber sudor",
     "precio":"$6199 ARS",
-    "sexo":"HOMBRE"
+    "sexo":"HOMBRE",
+    "id": 9
  },
  
  {
@@ -69,7 +80,8 @@
     "title":"LEATHER GRACE",
     "info":"Abrigo de cuero con cuadros, ideal en invierno",
     "precio":"$10999 ARS",
-    "sexo":"mujer"
+    "sexo":"mujer",
+    "id": 10
  },
 
  {
@@ -77,7 +89,8 @@
     "title":"LEOPARD WHITE",
     "info":"abrigo de cuero de leopardo blanco",
     "precio":"$13999 ARS",
-    "sexo":"mujer"
+    "sexo":"mujer",
+    "id": 11
  },
 
  {
@@ -85,7 +98,8 @@
     "title":"BEAR TIME",
     "info":"Abrigo de cuero de oso",
     "precio":"$13999 ARS",
-    "sexo":"mujer"
+    "sexo":"mujer",
+    "id": 12
  },
 
  {
@@ -93,7 +107,8 @@
     "title":"BROWN TIMING",
     "info":"buzo marron con cuadros tejidos a mano",
     "precio":"$7200 ARS",
-    "sexo":"mujer"
+    "sexo":"mujer",
+    "id": 13
  },
 
  {
@@ -101,7 +116,8 @@
     "title":"SIMPLE",
     "info":"Buzo informal para salidas con amigos",
     "precio":"$6200 ARS",
-    "sexo":"mujer"
+    "sexo":"mujer",
+    "id": 14
  },
 
  {
@@ -109,7 +125,8 @@
     "title":"Rainbow",
     "info":"Buzo de multiples colores con tela pesada",
     "precio":"$9400 ARS",
-    "sexo":"mujer"
+    "sexo":"mujer",
+    "id": 15
  },
 
  {
@@ -117,7 +134,8 @@
     "title":"Dark short",
     "info":"Pollera corta ideal para fiestas",
     "precio":"$4200 ARS",
-    "sexo":"mujer"
+    "sexo":"mujer",
+    "id": 16
  },
 
  {
@@ -125,7 +143,8 @@
     "title":"White short",
     "info":"Pollera corta para fiestas , en blanco",
     "precio":"$4200 ARS",
-    "sexo":"HOMBRE"
+    "sexo":"HOMBRE",
+    "id": 17
  },
 
  {
@@ -133,7 +152,8 @@
     "title":"Middle east style",
     "info":"Pollera estilo arabe, para playas",
     "precio":"$6600 ARS",
-    "sexo":"mujer"
+    "sexo":"mujer",
+    "id": 18
  }
  
  ]}

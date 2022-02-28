@@ -1,6 +1,8 @@
 
 const ROPAURL = "../data/ropa.json"
 
+
+
 export default function renderClothing(){
 
     
@@ -9,6 +11,8 @@ export default function renderClothing(){
         if(state === "success"){
             for (let i = 0; i < response.dataropa.length; i++) {
                 
+                
+
                 if(i >= 0 && i <= 2){
                 $("#container-camisas").append(`<div class=" col-xl-4 col-md-6 d-flex justify-content-center Bebas">
                                                 <div class="card mt-3" style="width: 18rem;">
@@ -20,13 +24,15 @@ export default function renderClothing(){
                                                         <ul class="list-group list-group-flush">
                                                          <li class="list-group-item">${response.dataropa[i].sexo}</li>
                                                         <li class="list-group-item">${response.dataropa[i].precio}</li>
-                                                         <button type="button" class="btn btn-primary m-3">Comprar</button>
+                                                         <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                                                         </ul>
             
                                                 </div>
                                             </div>`)
+                      
              
-                }   
+                }  
+                 
                 else if(i >= 3 && i <= 5){
                     $("#container-remeras").append(`<div class=" col-xl-4 col-md-6 d-flex justify-content-center Bebas">
                                                 <div class="card mt-3" style="width: 18rem;">
@@ -38,7 +44,7 @@ export default function renderClothing(){
                                                         <ul class="list-group list-group-flush">
                                                          <li class="list-group-item">${response.dataropa[i].sexo}</li>
                                                         <li class="list-group-item">${response.dataropa[i].precio}</li>
-                                                         <button type="button" class="btn btn-primary m-3">Comprar</button>
+                                                         <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                                                         </ul>
             
                                                 </div>
@@ -55,7 +61,7 @@ export default function renderClothing(){
                             <ul class="list-group list-group-flush">
                              <li class="list-group-item">${response.dataropa[i].sexo}</li>
                             <li class="list-group-item">${response.dataropa[i].precio}</li>
-                             <button type="button" class="btn btn-primary m-3">Comprar</button>
+                             <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                             </ul>
     
                     </div>
@@ -72,7 +78,7 @@ export default function renderClothing(){
                                                         <ul class="list-group list-group-flush">
                                                          <li class="list-group-item">${response.dataropa[i].sexo}</li>
                                                         <li class="list-group-item">${response.dataropa[i].precio}</li>
-                                                         <button type="button" class="btn btn-primary m-3">Comprar</button>
+                                                         <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                                                         </ul>
             
                                                 </div>
@@ -89,7 +95,7 @@ export default function renderClothing(){
                                                         <ul class="list-group list-group-flush">
                                                          <li class="list-group-item">${response.dataropa[i].sexo}</li>
                                                         <li class="list-group-item">${response.dataropa[i].precio}</li>
-                                                         <button type="button" class="btn btn-primary m-3">Comprar</button>
+                                                         <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                                                         </ul>
             
                                                 </div>
@@ -106,16 +112,76 @@ export default function renderClothing(){
                                                         <ul class="list-group list-group-flush">
                                                          <li class="list-group-item">${response.dataropa[i].sexo}</li>
                                                         <li class="list-group-item">${response.dataropa[i].precio}</li>
-                                                         <button type="button" class="btn btn-primary m-3">Comprar</button>
+                                                         <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                                                         </ul>
             
                                                 </div>
                                             </div>`)
-                }                                  
-            }
-            
-        }
+                }
+
+                
+                let html = `<table><tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                </tr>
+                `;
+                
+
+                $(`#${response.dataropa[i].id}`).click(() => {
+
+                    
+                   
+
+                  for (let dataropa of response.dataropa) {
+                    // let precio = currency(dataropa.precio);
+                    html += `<tr>
+                    <td>
+                      <div class="cart-info Bebas">
+                          <img class="size" src="${response.dataropa[i].img}" alt="">
+                          <div>
+                            <p>${response.dataropa[i].title}</p>
+                            <small>Precio: ${response.dataropa[i].precio}</small>
+                            <br>
+                            <a href="">Remover</a>
+                          </div>
+                      </div>
+                    </td>
+                    <td><input type="number" value="1">
+                    </td>
+                    <td>$50
+                    </td>
+                  </tr>
+                  `;
+                    
+                }
+                  
+                  
+                    
+                    localStorage.setItem("addToCart", html);
+                    
     
+                })
+                
+                   
+                
+                
+
+                    
+
+
+                                   
+            }
+
+            
+
+        }
+        let sexoxo = localStorage.getItem("addToCart");
+
+        
+            $("#cart-container").html(sexoxo);
+       
+        
     })
 
 }
