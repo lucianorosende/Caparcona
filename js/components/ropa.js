@@ -147,7 +147,7 @@ export default function renderClothing(){
                           <img class="size" src="${response.dataropa[i].img}" alt="">
                           <div>
                             <p>${response.dataropa[i].title}</p>
-                            <small>Precio: ${response.dataropa[i].precio}</small>
+                            <small>Precio: $${response.dataropa[i].precio} ARS</small>
                             <br>
                             <a href="">Remover</a>
                           </div>
@@ -155,7 +155,7 @@ export default function renderClothing(){
                     </td>
                     <td><input type="number" value="1">
                     </td>
-                    <td>${response.dataropa[i].precio}
+                    <td>$${response.dataropa[i].precio} ARS
                     </td>
                   </tr>
                   `;
@@ -186,23 +186,23 @@ export default function renderClothing(){
                     let base = `<table class="total-price">
                         <tr>
                         <td>Subtotal</td>
-                        <td>${sumWithInitial}</td>
+                        <td>$${sumWithInitial} ARS</td>
                         </tr>
                         <tr>
-                        <td>tax</td>
-                        <td id="table-foot"></td>
+                        <td>Impuesto IVA</td>
+                        <td id="table-foot">$${sumWithInitial * 1.21} ARS</td>
                         </tr>
                         <tr>
                         <td>Total</td>
-                        <td id="table-foot"></td>
+                        <td id="table-foot">$${sumWithInitial * 1.21} ARS</td>
                         </tr>
                         </table>`
                   
-                    let footer = JSON.parse(localStorage.getItem("totalPaying"));
+                    // let footer = JSON.parse(localStorage.getItem("totalPaying"));
 
-                    footer.push(base);
+                    // footer.push(base);
                       
-                    localStorage.setItem("totalPaying", JSON.stringify(footer));
+                    localStorage.setItem("totalPaying", JSON.stringify(base));
                 
                 
                   
