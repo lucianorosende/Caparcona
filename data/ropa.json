@@ -29,7 +29,7 @@
     "img":"https://images.dxl.com/is/image/CasualMale/Tees_Long-Sleeve_1041",
     "title":"UNDEFINED SHIRT",
     "info":"Remera para un pijama ideal",
-    "precio":"$4200 ARS",
+    "precio":4200,
     "sexo":"HOMBRE",
     "id": 4
     
@@ -38,7 +38,7 @@
     "img":"https://images.dxl.com/is/image/CasualMale/Tees_Henley_1041",
     "title":"Violet sunset",
     "info":"Remera informal ideal para un boliche",
-    "precio":"$3999 ARS",
+    "precio":3999,
     "sexo":"HOMBRE",
     "id": 5
  },
@@ -46,7 +46,7 @@
     "img":"https://images.dxl.com/is/image/CasualMale/Tees_Crewneck_1041_",
     "title":"Simple blue",
     "info":"Remera tipica para usos del dia a dia",
-    "precio":"$2800 ARS",
+    "precio":2800,
     "sexo":"HOMBRE",
     "id": 6
  },
@@ -54,7 +54,7 @@
     "img":"https://escollection.es/14974-thickbox_default/ts255-open-mesh-tank-top.jpg",
     "title":"Spot tank",
     "info":"Musculosa con hoyos para aire mas refrescante, version Blanca",
-    "precio":"$5300 ARS",
+    "precio":5300,
     "sexo":"HOMBRE",
     "id": 7
  },
@@ -62,7 +62,7 @@
     "img":"https://escollection.es/14977-thickbox_default/ts255-open-mesh-tank-top.jpg",
     "title":"Spot tank black",
     "info":"Musculosa con hoyos, version negra",
-    "precio":"$5300 ARS",
+    "precio":5300,
     "sexo":"HOMBRE",
     "id": 8
  },
@@ -70,7 +70,7 @@
     "img":"https://escollection.es/17536-thickbox_default/ts119-basic-tanktop.jpg",
     "title":"Gym tank",
     "info":"Musculosa entallada, ideal para absorber sudor",
-    "precio":"$6199 ARS",
+    "precio":6199,
     "sexo":"HOMBRE",
     "id": 9
  },
@@ -79,7 +79,7 @@
     "img":"https://is4.fwrdassets.com/images/p/fw/z/JDAF-WO7_V1.jpg",
     "title":"LEATHER GRACE",
     "info":"Abrigo de cuero con cuadros, ideal en invierno",
-    "precio":"$10999 ARS",
+    "precio":10999,
     "sexo":"mujer",
     "id": 10
  },
@@ -88,7 +88,7 @@
     "img":"https://is4.fwrdassets.com/images/p/fw/z/MAXM-WO36_V1.jpg",
     "title":"LEOPARD WHITE",
     "info":"abrigo de cuero de leopardo blanco",
-    "precio":"$13999 ARS",
+    "precio":13999,
     "sexo":"mujer",
     "id": 11
  },
@@ -97,7 +97,7 @@
     "img":"https://is4.fwrdassets.com/images/p/fw/z/MAXM-WO43_V1.jpg",
     "title":"BEAR TIME",
     "info":"Abrigo de cuero de oso",
-    "precio":"$13999 ARS",
+    "precio":13999,
     "sexo":"mujer",
     "id": 12
  },
@@ -106,7 +106,7 @@
     "img":"https://is4.fwrdassets.com/images/p/fw/p/RTFF-WK3_V4.jpg",
     "title":"BROWN TIMING",
     "info":"buzo marron con cuadros tejidos a mano",
-    "precio":"$7200 ARS",
+    "precio":7200,
     "sexo":"mujer",
     "id": 13
  },
@@ -115,7 +115,7 @@
     "img":"https://is4.fwrdassets.com/images/p/fw/p/TBBY-WK140_V4.jpg",
     "title":"SIMPLE",
     "info":"Buzo informal para salidas con amigos",
-    "precio":"$6200 ARS",
+    "precio":6200,
     "sexo":"mujer",
     "id": 14
  },
@@ -124,7 +124,7 @@
     "img":"https://is4.fwrdassets.com/images/p/fw/p/ELSM-WK84_V4.jpg",
     "title":"Rainbow",
     "info":"Buzo de multiples colores con tela pesada",
-    "precio":"$9400 ARS",
+    "precio":9400,
     "sexo":"mujer",
     "id": 15
  },
@@ -133,7 +133,7 @@
     "img":"https://is4.fwrdassets.com/images/p/fw/z/CRUI-WQ2_V1.jpg",
     "title":"Dark short",
     "info":"Pollera corta ideal para fiestas",
-    "precio":"$4200 ARS",
+    "precio":4200,
     "sexo":"mujer",
     "id": 16
  },
@@ -142,7 +142,7 @@
     "img":"https://is4.fwrdassets.com/images/p/fw/z/CRUI-WQ1_V1.jpg",
     "title":"White short",
     "info":"Pollera corta para fiestas , en blanco",
-    "precio":"$4200 ARS",
+    "precio":4200,
     "sexo":"HOMBRE",
     "id": 17
  },
@@ -151,7 +151,7 @@
     "img":"https://is4.fwrdassets.com/images/p/fw/z/NHKF-WQ24_V1.jpg",
     "title":"Middle east style",
     "info":"Pollera estilo arabe, para playas",
-    "precio":"$6600 ARS",
+    "precio":6600,
     "sexo":"mujer",
     "id": 18
  }

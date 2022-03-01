@@ -38,7 +38,7 @@ export default function renderClothing(){
                                                             </div>
                                                         <ul class="list-group list-group-flush">
                                                          <li class="list-group-item">${response.dataropa[i].sexo}</li>
-                                                        <li class="list-group-item">${response.dataropa[i].precio}</li>
+                                                        <li class="list-group-item">$${response.dataropa[i].precio} ARS</li>
                                                          <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                                                         </ul>
             
@@ -58,7 +58,7 @@ export default function renderClothing(){
                                                             </div>
                                                         <ul class="list-group list-group-flush">
                                                          <li class="list-group-item">${response.dataropa[i].sexo}</li>
-                                                        <li class="list-group-item">${response.dataropa[i].precio}</li>
+                                                        <li class="list-group-item">$${response.dataropa[i].precio} ARS</li>
                                                          <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                                                         </ul>
             
@@ -75,7 +75,7 @@ export default function renderClothing(){
                                 </div>
                             <ul class="list-group list-group-flush">
                              <li class="list-group-item">${response.dataropa[i].sexo}</li>
-                            <li class="list-group-item">${response.dataropa[i].precio}</li>
+                            <li class="list-group-item">$${response.dataropa[i].precio} ARS</li>
                              <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                             </ul>
     
@@ -92,7 +92,7 @@ export default function renderClothing(){
                                                             </div>
                                                         <ul class="list-group list-group-flush">
                                                          <li class="list-group-item">${response.dataropa[i].sexo}</li>
-                                                        <li class="list-group-item">${response.dataropa[i].precio}</li>
+                                                        <li class="list-group-item">$${response.dataropa[i].precio} ARS</li>
                                                          <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                                                         </ul>
             
@@ -109,7 +109,7 @@ export default function renderClothing(){
                                                             </div>
                                                         <ul class="list-group list-group-flush">
                                                          <li class="list-group-item">${response.dataropa[i].sexo}</li>
-                                                        <li class="list-group-item">${response.dataropa[i].precio}</li>
+                                                        <li class="list-group-item">$${response.dataropa[i].precio} ARS</li>
                                                          <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                                                         </ul>
             
@@ -126,7 +126,7 @@ export default function renderClothing(){
                                                             </div>
                                                         <ul class="list-group list-group-flush">
                                                          <li class="list-group-item">${response.dataropa[i].sexo}</li>
-                                                        <li class="list-group-item">${response.dataropa[i].precio}</li>
+                                                        <li class="list-group-item">$${response.dataropa[i].precio} ARS</li>
                                                          <button type="button" id="${response.dataropa[i].id}" class="btn btn-primary m-3">Comprar</button>
                                                         </ul>
             
@@ -257,7 +257,7 @@ export default function renderClothing(){
             'success'
             
         )
-
+        
      })
      
            
