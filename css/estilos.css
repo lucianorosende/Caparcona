@@ -282,9 +282,10 @@ body, html {
 /* DESKTOP */
 @media (min-width: 1200px) {
   .cart-page {
-    margin: 30px 90px 90px 90px;
+    margin: 2%;
     color: white; }
   .total-price {
+    border-top: 2px solid #A85751;
     display: flex;
     justify-content: flex-end; }
   td:last-child {
@@ -311,15 +312,16 @@ body, html {
 /* TABLET */
 @media (min-width: 576px) and (max-width: 1199px) {
   .cart-page {
-    margin: 30px 90px 90px 90px;
+    margin: 3.5%;
     color: white; }
   .total-price {
+    border-top: 2px solid #A85751;
     display: flex;
     justify-content: flex-end; }
   td:last-child {
-    text-align: right; }
+    text-align: end; }
   th:last-child {
-    text-align: right; }
+    text-align: end; }
   nav {
     font-family: 'Bebas Neue', cursive; }
   .rebaja__Style {
@@ -486,11 +488,10 @@ body, html {
   table {
     width: 100%; }
   .cart-page {
-    margin: 5%;
+    margin: 0%;
     color: white; }
   .total-price {
-    display: flex;
-    justify-content: flex-end; }
+    border-top: 2px solid #A85751; }
   td:last-child {
     text-align: end; }
   th:last-child {
@@ -644,8 +645,3 @@ td img {
   height: 70px;
   margin-right: 10px;
   border-radius: 3px; }
-
-.total-price table {
-  border-top: 3px solid #A85751;
-  width: 100%;
-  max-width: 400px; }
