@@ -12,10 +12,13 @@ export default function renderClothing(){
         let value = JSON.parse(localStorage.getItem('CartValue')) || [];
         let names = JSON.parse(localStorage.getItem('addToCart')) || [];
         let totalPaying = JSON.parse(localStorage.getItem('totalPaying')) || [];
+        let tableTop = JSON.parse(localStorage.getItem('tableTop')) || [];
 
         localStorage.setItem("addToCart", JSON.stringify(names));
         localStorage.setItem("CartValue", JSON.stringify(value));
         localStorage.setItem("totalPaying", JSON.stringify(totalPaying));
+        localStorage.setItem('tableTop', JSON.stringify(tableTop));
+
         let total = 0;
         
         
@@ -138,8 +141,14 @@ export default function renderClothing(){
                 $(`#${response.dataropa[i].id}`).click(() => {
                     
                   
+                    let topContainer = `<tr>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Subtotal</th>
+                                        </tr>`
+                      
+                    localStorage.setItem("tableTop", JSON.stringify(topContainer));
                     
-                    // if($(`#${response.dataropa[i].id}`)){
                         
                      let drawer =  `<tr>
                     <td>
@@ -166,9 +175,6 @@ export default function renderClothing(){
                 
                   localStorage.setItem("addToCart", JSON.stringify(adder));
 
-                    
-
-                    
                   let itemValue = JSON.parse(localStorage.getItem("CartValue"));
 
                   let valueAdd = itemValue.push(parseInt(`${response.dataropa[i].precio}`))
@@ -179,11 +185,9 @@ export default function renderClothing(){
                   
                   const sumWithInitial = array.reduce(
                     (previousValue, currentValue) => previousValue + currentValue,
-                    total
-                  );
-
-                  
-                    let base = `<table class="total-price">
+                    total);
+                    
+                  let base = `<table class="total-price">
                         <tr>
                         <td>Subtotal</td>
                         <td>$${sumWithInitial} ARS</td>
@@ -202,7 +206,12 @@ export default function renderClothing(){
                         </tr>
                         </table>`
                       
-                    localStorage.setItem("totalPaying", JSON.stringify(base));
+                  localStorage.setItem("totalPaying", JSON.stringify(base));
+
+                    
+                  
+
+                  
                 
                 
                   
@@ -215,7 +224,7 @@ export default function renderClothing(){
                   
                     
                     return false;
-                    // }
+                    
                     
                   
                 });
@@ -245,7 +254,7 @@ export default function renderClothing(){
          
   
 
-       
+     $("#top-table").html(JSON.parse(localStorage.getItem("tableTop")))   
      $("#cart-container").html(JSON.parse(localStorage.getItem("addToCart")));
      $("#table-foot").html(JSON.parse(localStorage.getItem("totalPaying")));
      $("#buy").click(() => {
@@ -261,6 +270,7 @@ export default function renderClothing(){
      })
      $("#Clean").click(() =>{ 
         localStorage.clear();
+        $("#top-table").html("")
         $("#cart-container").html("");
         $("#table-foot").html("");
      })
