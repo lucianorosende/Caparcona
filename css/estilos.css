@@ -282,12 +282,8 @@ body, html {
 /* DESKTOP */
 @media (min-width: 1200px) {
   .cart-page {
-    margin: 2%;
+    margin: 3%;
     color: white; }
-  .total-price {
-    border-top: 2px solid #A85751;
-    display: flex;
-    justify-content: flex-end; }
   td:last-child {
     text-align: right; }
   th:last-child {
@@ -312,12 +308,8 @@ body, html {
 /* TABLET */
 @media (min-width: 576px) and (max-width: 1199px) {
   .cart-page {
-    margin: 3.5%;
+    margin: 3%;
     color: white; }
-  .total-price {
-    border-top: 2px solid #A85751;
-    display: flex;
-    justify-content: flex-end; }
   td:last-child {
     text-align: end; }
   th:last-child {
@@ -480,22 +472,20 @@ body, html {
     grid-area: goUp; }
   .cart-info p {
     display: none; }
-  .cart-sm {
-    display: flex;
-    justify-content: center; }
   .text-sm {
     display: none; }
   table {
     width: 100%; }
   .cart-page {
-    margin: 0%;
+    margin: 5%;
     color: white; }
-  .total-price {
-    border-top: 2px solid #A85751; }
   td:last-child {
     text-align: end; }
   th:last-child {
-    text-align: end; } }
+    text-align: end; }
+  #table-foot {
+    display: flex;
+    justify-content: flex-end; } }
 
 .loginBox, .regBox {
   width: 300px;
@@ -645,3 +635,8 @@ td img {
   height: 70px;
   margin-right: 10px;
   border-radius: 3px; }
+
+.total-price {
+  border-top: 2px solid #A85751;
+  display: flex;
+  justify-content: flex-end; }

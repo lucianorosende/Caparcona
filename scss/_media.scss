@@ -11,18 +11,13 @@
 
     .cart-page{
 
-        margin: 2%;
+        margin: 3%;
         color: white;
         
     
     }
     
-    .total-price{
-        border-top: 2px solid $redtree;
-        display: flex;
-        justify-content: flex-end;
-        
-    }
+    
 
     td:last-child{
         text-align: right;
@@ -61,19 +56,13 @@
     
     .cart-page{
 
-        margin: 3.5%;
+        margin: 3%;
         color: white;
         
     
     }
 
-    .total-price{
-        
-        border-top: 2px solid $redtree;
-        display: flex;
-        justify-content: flex-end;
-        
-    }
+    
 
     td:last-child{
         text-align: end;
@@ -375,11 +364,7 @@
     .cart-info p{
         display: none;
     }
-    .cart-sm{
-        display: flex;
-        justify-content: center;
-        
-    }
+    
     .text-sm{
         display: none;
     }
@@ -388,16 +373,11 @@
     }
 
     .cart-page{
-        margin: 0%;
+        margin: 5%;
         color: white;
     }
 
-    .total-price{
-        
-        border-top: 2px solid $redtree;
-        
-        
-    }
+    
 
     td:last-child{
         text-align: end;
@@ -406,4 +386,9 @@
         text-align: end;
     }
     
+    #table-foot{
+        display: flex;
+        justify-content: flex-end;
+    }
+
     }
