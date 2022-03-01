@@ -196,11 +196,11 @@ export default function renderClothing(){
                         <td>Total</td>
                         <td id="table-foot">$${sumWithInitial * 1.21} ARS</td>
                         </tr>
+                        <tr>
+                        <td></td>
+                        <td><button id="buy" type="button" class="btn btn-success">Comprar</button></td>
+                        </tr>
                         </table>`
-                  
-                    // let footer = JSON.parse(localStorage.getItem("totalPaying"));
-
-                    // footer.push(base);
                       
                     localStorage.setItem("totalPaying", JSON.stringify(base));
                 
@@ -248,6 +248,17 @@ export default function renderClothing(){
        
      $("#cart-container").html(JSON.parse(localStorage.getItem("addToCart")));
      $("#table-foot").html(JSON.parse(localStorage.getItem("totalPaying")));
+     $("#buy").click(() => {
+
+        Swal.fire(
+                    
+            'Gracias por tu compra!',
+            'Espero que lo disfrutes!',
+            'success'
+            
+        )
+
+     })
      
            
 }
