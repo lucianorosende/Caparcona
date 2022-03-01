@@ -6,7 +6,12 @@ class Register {
             this.email = email,
             this.user = user,
             this.pw = pw,
-            this.format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+            this.format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+            this.lowercase = /[a-z]/g,
+            this.uppercase =  /[A-Z]/g,
+            this.numbers = /[0-9]/g,
+            this.special = /[^a-zA-Z]/g
+
         ]
         
         for(let i = 0; i < data.length; i++){
@@ -46,6 +51,36 @@ class Register {
                     
                 })
 
+            }
+            else if(this.user.match(this.special)){
+                Swal.fire({
+                    icon: 'error',
+                    text: 'El usuario no puede tener caracteres especiales!'
+                    
+                })
+            }
+            else if(!this.pw.match(this.lowercase)){
+                Swal.fire({
+                    icon: 'error',
+                    text: 'El Password necesita usar al menos 1 Mayuscula, Minuscula y numeros!'
+                    
+                })
+            
+            }
+            else if(!this.pw.match(this.uppercase)){
+                Swal.fire({
+                    icon: 'error',
+                    text: 'El Password necesita usar al menos 1 Mayuscula, Minuscula y numeros!'
+                    
+                })
+                
+            }
+            else if(!this.pw.match(this.numbers)){
+                Swal.fire({
+                    icon: 'error',
+                    text: 'El Password necesita usar al menos 1 Mayuscula, Minuscula y numeros!'
+                    
+                })
             }
             else if(this.user.length && this.pw.length < 6){  
                 Swal.fire({
