@@ -37,8 +37,9 @@ td a{
     font-size: 12px;
 }
 td img{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
     margin-right: 10px;
     border-radius: 3px;
 }

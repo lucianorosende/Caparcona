@@ -189,12 +189,12 @@ export default function renderClothing(){
                         <td>$${sumWithInitial} ARS</td>
                         </tr>
                         <tr>
-                        <td>Impuesto IVA</td>
-                        <td id="table-foot">$${sumWithInitial * 1.21} ARS</td>
+                        <td>Impuesto IVA (21%)</td>
+                        <td id="table-foot">$${parseInt(sumWithInitial * 1.21)} ARS</td>
                         </tr>
                         <tr>
                         <td>Total</td>
-                        <td id="table-foot">$${sumWithInitial * 1.21} ARS</td>
+                        <td id="table-foot">$${parseInt(sumWithInitial * 1.21)} ARS</td>
                         </tr>
                         <tr>
                         <td></td>
@@ -253,11 +253,16 @@ export default function renderClothing(){
         Swal.fire(
                     
             'Gracias por tu compra!',
-            'Espero que lo disfrutes!',
+            'Esperamos que lo disfrutes!',
             'success'
             
         )
         
+     })
+     $("#Clean").click(() =>{ 
+        localStorage.clear();
+        $("#cart-container").html("");
+        $("#table-foot").html("");
      })
      
            
