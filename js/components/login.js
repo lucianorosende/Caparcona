@@ -27,6 +27,8 @@ class Login {
 
 
     loginCheck(){
+        let logged = JSON.parse(localStorage.getItem('logHTML')) || [];
+        localStorage.setItem("logHTML", JSON.stringify(logged));
 
         let regInfo = JSON.parse(localStorage.getItem("formulario_reg"));
 
@@ -44,9 +46,12 @@ class Login {
                     'success'
                     
                     )
-                $(".log-change").html("");     
-                $(".log-change").append(`<p class='successDiv Bebas'>Bienvenido <span class=''>${regInfo.Usuario}!</span></p>`);
-                console.log(`Bienvenido a la pagina ${regInfo.Usuario}!`)
+            let logHTML = `<p class='successDiv Bebas'>Bienvenido <span class=''>${regInfo.Usuario}!</span></p>`
+            localStorage.setItem("logHTML", JSON.stringify(logHTML));
+            $(".log-change").html("");     
+            $(".log-change").html(JSON.parse(localStorage.getItem("logHTML")));        
+                
+            console.log(`Bienvenido a la pagina ${regInfo.Usuario}!`)
                 
         }
         } 

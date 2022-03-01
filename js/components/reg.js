@@ -35,6 +35,10 @@ class Register {
 
     dataCheck(){
 
+            let registered = JSON.parse(localStorage.getItem('registerHTML')) || [];
+            localStorage.setItem("registerHTML", JSON.stringify(registered));
+
+
             let infoS = {
                 Email: this.email,
                 Usuario: this.user,
@@ -99,8 +103,10 @@ class Register {
                 )
                 this.dataLog();
             }
+            let reghtml = `<p class='successDiv Bebas'>YA ESTAS REGISTRADO!</p>`
+            localStorage.setItem("registerHTML", JSON.stringify(reghtml));
             $(".reg-change").html("");
-            $(".reg-change").append(`<p class='successDiv Bebas'>YA ESTAS REGISTRADO!</p>`);
+            $(".reg-change").html(JSON.parse(localStorage.getItem("registerHTML")));  
                
 
 
@@ -115,5 +121,7 @@ class Register {
     }
     
 }    
-    
+
+
+
 export default Register;
