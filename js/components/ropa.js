@@ -162,23 +162,27 @@ export default function renderClothing(){
                     localStorage.setItem("tableTop", JSON.stringify(topContainer));
                     
                         
-                     let drawer =  `<tr id="idR${response.dataropa[i].id}">
-                    <td>
-                      <div class="cart-info Bebas">
-                          <img class="size" src="${response.dataropa[i].img}" alt="">
-                          <div>
-                            <p>${response.dataropa[i].title}</p>
-                            <small>Precio: $${response.dataropa[i].precio} ARS</small>
-                            <br>
-                            <button id=id${response.dataropa[i].id} type="button" class="btn btn-success">Remover</button>
-                          </div>
-                      </div>
-                    </td>
-                    <td><input type="number" value="1">
-                    </td>
-                    <td>$${response.dataropa[i].precio} ARS
-                    </td>
-                  </tr>
+                     let drawer =  `
+                                    
+                                        <tr id="idR${response.dataropa[i].id}">
+                                                 <td>
+                                                                  <div class="cart-info Bebas">
+                                                                      <img class="size" src="${response.dataropa[i].img}" alt="">
+                                                                      <div>
+                                                                        <p>${response.dataropa[i].title}</p>
+                                                                        <small>Precio: $${response.dataropa[i].precio} ARS</small>
+                                                                        <br>
+                                                                        <button id=id${response.dataropa[i].id} type="button" class="btn btn-success">Remover</button>
+                                                                      </div>
+                                                                  </div>
+                                                 </td>
+                                                 <td><input type="number" value="1">
+                                                 </td>
+                                                 <td>$${response.dataropa[i].precio} ARS
+                                                 </td>
+                                               </tr>
+                                     
+                     
                   `;
 
                   let adder = JSON.parse(localStorage.getItem("addToCart"));
@@ -237,23 +241,30 @@ export default function renderClothing(){
                                    
         }
 
-        // como ultimo intento quise agregar una forma de eliminar 1 item en especifico del carrito, solo logre poder identificar 1 solo bloque pero no eliminarlo
+    
 
-        let cartArray = JSON.parse(localStorage.getItem("addToCart"));
+       
     
         for(let j = 0; j < response.dataropa.length; j++){
 
         $(`#id${response.dataropa[j].id}`).click(() => {
 
-            let splitter = cartArray[j].split(",");
-            let elements = splitter.splice(j);
-            return elements.join(",");
+        
             
-            // $(`idR${response.dataropa[j].id}`).html("");
-            // console.log(cartArray[j]);
-            // console.log(`idR${response.dataropa[j].id}`)
+            $(`#idR${response.dataropa[j].id}`).html("");
+           
+            
+            // no se me ocurrio manera de eliminar todo cuando no existe ningun item en el carrito
+            if(document.getElementById(`idR${response.dataropa[j].id}`).innerHTML = ""){
+
+                localStorage.clear();
+                $("#top-table").html("")
+                $("#cart-container").html("");
+                $("#table-foot").html("");
+            }
+
         })
-    }
+        }
             
 
     })
