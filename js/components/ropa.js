@@ -13,13 +13,15 @@ export default function renderClothing(){
         let names = JSON.parse(localStorage.getItem('addToCart')) || [];
         let totalPaying = JSON.parse(localStorage.getItem('totalPaying')) || [];
         let tableTop = JSON.parse(localStorage.getItem('tableTop')) || [];
+        let total = 0;
 
         localStorage.setItem("addToCart", JSON.stringify(names));
         localStorage.setItem("CartValue", JSON.stringify(value));
         localStorage.setItem("totalPaying", JSON.stringify(totalPaying));
         localStorage.setItem('tableTop', JSON.stringify(tableTop));
-
-        let total = 0;
+        
+        
+        
         
         
 
@@ -139,8 +141,18 @@ export default function renderClothing(){
 
                 
                 $(`#${response.dataropa[i].id}`).click(() => {
+                       
+
+                    Swal.fire({
+                        position: 'bottom-end',
+                        icon: 'success',
+                        title: `Agregaste: ${response.dataropa[i].title} al carrito`,
+                        showConfirmButton: false,
+                        timer: 1000
+                      })
+    
                     
-                  
+                    
                     let topContainer = `<tr>
                                         <th>Producto</th>
                                         <th>Cantidad</th>
@@ -150,7 +162,7 @@ export default function renderClothing(){
                     localStorage.setItem("tableTop", JSON.stringify(topContainer));
                     
                         
-                     let drawer =  `<tr>
+                     let drawer =  `<tr id="idR${response.dataropa[i].id}">
                     <td>
                       <div class="cart-info Bebas">
                           <img class="size" src="${response.dataropa[i].img}" alt="">
@@ -158,7 +170,7 @@ export default function renderClothing(){
                             <p>${response.dataropa[i].title}</p>
                             <small>Precio: $${response.dataropa[i].precio} ARS</small>
                             <br>
-                            <a href="">Remover</a>
+                            <button id=id${response.dataropa[i].id} type="button" class="btn btn-success">Remover</button>
                           </div>
                       </div>
                     </td>
@@ -186,7 +198,9 @@ export default function renderClothing(){
                   const sumWithInitial = array.reduce(
                     (previousValue, currentValue) => previousValue + currentValue,
                     total);
-                    
+                  
+                  let taxIva = parseInt(sumWithInitial * 1.21);  
+
                   let base = `<table class="total-price">
                         <tr>
                         <td>Subtotal</td>
@@ -194,11 +208,11 @@ export default function renderClothing(){
                         </tr>
                         <tr>
                         <td>Impuesto IVA (21%)</td>
-                        <td id="table-foot">$${parseInt(sumWithInitial * 1.21)} ARS</td>
+                        <td id="table-foot">$${taxIva} ARS</td>
                         </tr>
                         <tr>
                         <td>Total</td>
-                        <td id="table-foot">$${parseInt(sumWithInitial * 1.21)} ARS</td>
+                        <td id="table-foot">$${taxIva} ARS</td>
                         </tr>
                         <tr>
                         <td></td>
@@ -206,36 +220,11 @@ export default function renderClothing(){
                         </tr>
                         </table>`
                       
-                  localStorage.setItem("totalPaying", JSON.stringify(base));
-
-                    
-                  
-
-                  
-                
-                
-                  
-                  
-                    
-
-        
-            
-
-                  
-                    
-                    return false;
-                    
-                    
-                  
+                 localStorage.setItem("totalPaying", JSON.stringify(base));
+  
+                 return false;
+                 
                 });
-              
-               
-
-                
-
-                    
-                    
-    
             }
                 
                 
@@ -248,33 +237,88 @@ export default function renderClothing(){
                                    
         }
 
+        // como ultimo intento quise agregar una forma de eliminar 1 item en especifico del carrito, solo logre poder identificar 1 solo bloque pero no eliminarlo
+
+        let cartArray = JSON.parse(localStorage.getItem("addToCart"));
+    
+        for(let j = 0; j < response.dataropa.length; j++){
+
+        $(`#id${response.dataropa[j].id}`).click(() => {
+
+            let splitter = cartArray[j].split(",");
+            let elements = splitter.splice(j);
+            return elements.join(",");
+            
+            // $(`idR${response.dataropa[j].id}`).html("");
+            // console.log(cartArray[j]);
+            // console.log(`idR${response.dataropa[j].id}`)
+        })
+    }
             
 
     })
-         
-  
 
-     $("#top-table").html(JSON.parse(localStorage.getItem("tableTop")))   
-     $("#cart-container").html(JSON.parse(localStorage.getItem("addToCart")));
-     $("#table-foot").html(JSON.parse(localStorage.getItem("totalPaying")));
-     $("#buy").click(() => {
+    
 
-        Swal.fire(
-                    
-            'Gracias por tu compra!',
-            'Esperamos que lo disfrutes!',
-            'success'
-            
-        )
-        
-     })
-     $("#Clean").click(() =>{ 
-        localStorage.clear();
-        $("#top-table").html("")
-        $("#cart-container").html("");
-        $("#table-foot").html("");
-     })
-     
+
+    $("#top-table").html(JSON.parse(localStorage.getItem("tableTop")))   
+    $("#cart-container").html(JSON.parse(localStorage.getItem("addToCart")));
+    $("#table-foot").html(JSON.parse(localStorage.getItem("totalPaying")));
+    
+
+    $("#buy").click(() => {
+
+       Swal.fire(
+                   
+           'Gracias por tu compra!',
+           'Esperamos que lo disfrutes!',
+           'success'
            
+       )
+       localStorage.clear();
+       $("#top-table").html("")
+       $("#cart-container").html("");
+       $("#table-foot").html("");
+       
+    })
+
+    $("#Clean").click(() =>{ 
+       localStorage.clear();
+       $("#top-table").html("")
+       $("#cart-container").html("");
+       $("#table-foot").html("");
+    })
+    
+          
 }
+
+                 
+
+                    
+
+                  
+                
+                
+                  
+                  
+                    
+
+        
+            
+
+                  
+                    
+                    
+                  
+              
+               
+                
+                
+
+                    
+                    
+    
+         
+     
+         
 
