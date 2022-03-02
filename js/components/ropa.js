@@ -193,7 +193,7 @@ export default function renderClothing(){
 
                   let itemValue = JSON.parse(localStorage.getItem("CartValue"));
 
-                  let valueAdd = itemValue.push(parseInt(`${response.dataropa[i].precio}`))
+                  itemValue.push(parseInt(`${response.dataropa[i].precio}`))
 
                   localStorage.setItem("CartValue", JSON.stringify(itemValue));
 
@@ -265,7 +265,7 @@ export default function renderClothing(){
 
         })
         }
-            
+        return false;    
 
     })
 
