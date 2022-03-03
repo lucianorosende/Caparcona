@@ -137,15 +137,21 @@ export default function renderClothing(){
                 
                 $(`#${response.dataropa[i].id}`).click(() => {
                        
-
-                    Swal.fire({
-                        position: 'bottom-end',
-                        icon: 'success',
-                        title: `Agregaste: ${response.dataropa[i].title} al carrito`,
-                        showConfirmButton: false,
-                        timer: 1000
-                      })
-    
+                    Toastify({
+                        text: `Agregaste ${response.dataropa[i].title}`,
+                        duration: 1800,
+                        destination: "https://github.com/apvarun/toastify-js",
+                        newWindow: true,
+                        close: false,
+                        gravity: "top", // `top` or `bottom`
+                        position: "right", // `left`, `center` or `right`
+                        stopOnFocus: true, // Prevents dismissing of toast on hover
+                        style: {
+                            background: "linear-gradient(to right, #A85751, #96c93d)"
+                          
+                        },
+                        onClick: function(){} // Callback after click
+                      }).showToast();
                     
                     
                     let topContainer = `<tr>
