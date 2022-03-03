@@ -86,10 +86,17 @@ class Register {
                     
                 })
             }
-            else if(this.user.length && this.pw.length < 6){  
+            else if(this.user.length < 6){  
                 Swal.fire({
                     icon: 'error',
-                    text: 'El usuario o password son muy cortos!'
+                    text: 'El usuario es muy corto!'
+                    
+                })
+            }
+            else if(this.pw.length < 6){  
+                Swal.fire({
+                    icon: 'error',
+                    text: 'El password es muy corto!'
                     
                 })
             }

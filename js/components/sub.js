@@ -48,13 +48,6 @@ class Subscription {
                 })
 
             }
-            else if(this.name.length && this.surname.length < 4){  
-                Swal.fire({
-                    icon: 'error',
-                    text: 'el nombre o apellido son muy cortos!'
-                    
-                })
-            }
             else if(!this.name.match(this.nameFormat) || !this.surname.match(this.nameFormat) ){
                 Swal.fire({
                     icon: 'error',
@@ -62,6 +55,20 @@ class Subscription {
                     
                 })
 
+            }
+            else if(this.name.length < 4){  
+                Swal.fire({
+                    icon: 'error',
+                    text: `El nombre ${this.name} es muy corto!`
+                    
+                })
+            }
+            else if(this.surname.length < 4){  
+                Swal.fire({
+                    icon: 'error',
+                    text: `El apellido ${this.surname} es muy corto!`
+                    
+                })
             }
             else{
                 Swal.fire(
