@@ -20,11 +20,6 @@ export default function renderClothing(){
         localStorage.setItem("totalPaying", JSON.stringify(totalPaying));
         localStorage.setItem('tableTop', JSON.stringify(tableTop));
         
-        
-        
-        
-        
-
         if(state === "success"){
             
             
@@ -302,6 +297,11 @@ export default function renderClothing(){
     
           
 }
+        
+        
+        
+        
+
 
                  
 
